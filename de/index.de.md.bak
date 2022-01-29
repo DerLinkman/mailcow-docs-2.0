@@ -69,7 +69,7 @@ Jeder Container repräsentiert eine einzelne Anwendung.
 - [Dovecot](https://www.dovecot.org/)
 - [MariaDB](https://mariadb.org/)
 - [Memcached](https://www.memcached.org/)
-- [Netfilter](https://www.netfilter.org/) (Fail2ban-ähnliche Integration von [@mkuron](https://github.com/mkuron))
+- [Netfilter](https://www.netfilter.org/) (Fail2ban-aehnliche Integration von [@mkuron](https://github.com/mkuron))
 - [Nginx](https://nginx.org/)
 - [Oletools](https://github.com/decalage2/oletools) über [Olefy](https://github.com/HeinleinSupport/olefy)
 - [PHP](https://php.net/)
