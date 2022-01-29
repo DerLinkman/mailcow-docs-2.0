@@ -2484,7 +2484,7 @@
 </tr>
 </tbody>
 </table>
-<p>Wir empfehlen, jede Distribution zu verwenden, die von Docker CE unterstützt wird (siehe https://docs.docker.com/install/). Wir testen auf CentOS 7, Debian 10/11 und Ubuntu 18.04/20.04.</p>
+<p>Wir empfehlen, jede Distribution zu verwenden, die von Docker CE unterstützt wird (siehe <a href="https://docs.docker.com/install/">https://docs.docker.com/install/</a>). Wir testen auf CentOS 7, Debian 10/11 und Ubuntu 18.04/20.04.</p>
 <p>ClamAV und Solr können gierig nach RAM sein. Du kannst sie in <code>mailcow.conf</code> durch die Einstellungen <code>SKIP_CLAMD=y</code> und <code>SKIP_SOLR=y</code> deaktivieren.</p>
 <p><strong>Info</strong>: Wir sind uns bewusst, dass ein reiner MTA auf 128 MiB RAM laufen kann. mailcow ist eine ausgewachsene und gebrauchsfertige Groupware mit vielen Extras, die das Leben einfacher machen. mailcow kommt mit einem Webserver, Webmailer, ActiveSync (MS), Antivirus, Antispam, Indexierung (Solr), Dokumentenscanner (Oletools), SQL (MariaDB), Cache (Redis), MDA, MTA, verschiedenen Webdiensten etc.</p>
 <p>Ein einzelner SOGo-Worker <strong>kann</strong> ~350 MiB RAM belegen, bevor er geleert wird. Je mehr ActiveSync-Verbindungen Sie verwenden möchten, desto mehr RAM wird benötigt. In der Standardkonfiguration werden 20 Arbeiter erzeugt.</p>
@@ -2494,10 +2494,10 @@
 <p>Im Rahmen unseres Supports können wir Ihnen bei der korrekten Planung Ihres Setups helfen.</p>
 <h2 id="firewall-ports">Firewall &amp; Ports<a class="headerlink" href="#firewall-ports" title="Permanent link">&para;</a></h2>
 <p>Bitte überprüfen Sie, ob alle Standard-Ports von mailcow offen sind und nicht von anderen Anwendungen genutzt werden:</p>
-<pre><code>ss -tlpn | grep -E -w '25|80|110|143|443|465|587|993|995|4190|5222|5269|5443'
+<div class="highlight"><pre><span></span><code>ss -tlpn | grep -E -w &#39;25|80|110|143|443|465|587|993|995|4190|5222|5269|5443&#39;
 # oder:
-netstat -tulpn | grep -E -w '25|80|110|143|443|465|587|993|995|4190|5222|5269|5443'
-</code></pre>
+netstat -tulpn | grep -E -w &#39;25|80|110|143|443|465|587|993|995|4190|5222|5269|5443&#39;
+</code></pre></div>
 <div class="admonition warnung">
 <p class="admonition-title">Warnung</p>
 <p>Es gibt einige Probleme mit dem Betrieb von mailcow auf einem Firewalld/ufw aktivierten System. Sie sollten es deaktivieren (wenn möglich) und stattdessen Ihren Regelsatz in die DOCKER-USER-Kette verschieben, die nicht durch einen Neustart des Docker-Dienstes gelöscht wird. Siehe <a href="https://blog.donnex.net/docker-and-iptables-filtering/">diese (blog.donnex.net)</a> oder <a href="https://unrouted.io/2017/08/15/docker-firewall/">diese (unrouted.io)</a> Anleitung für Informationen darüber, wie man iptables-persistent mit der DOCKER-USER Kette benutzt.
@@ -2585,39 +2585,39 @@ Da mailcow im Docker-Modus läuft, haben INPUT-Regeln keinen Effekt auf die Besc
 <p>Um einen Dienst an eine IP-Adresse zu binden, können Sie die IP-Adresse wie folgt voranstellen: <code>SMTP_PORT=1.2.3.4:25</code></p>
 <p><strong>Wichtig</strong>: Sie können keine IP:PORT-Bindungen in HTTP_PORT und HTTPS_PORT verwenden. Bitte verwenden Sie stattdessen <code>HTTP_PORT=1234</code> und <code>HTTP_BIND=1.2.3.4</code>.</p>
 <h3 id="wichtig-fur-hetzner-firewalls">Wichtig für Hetzner Firewalls<a class="headerlink" href="#wichtig-fur-hetzner-firewalls" title="Permanent link">&para;</a></h3>
-<p>Ich zitiere https://github.com/chermsen über https://github.com/mailcow/mailcow-dockerized/issues/497#issuecomment-469847380 (DANKE!):</p>
+<p>Ich zitiere <a href="https://github.com/chermsen">https://github.com/chermsen</a> über <a href="https://github.com/mailcow/mailcow-dockerized/issues/497#issuecomment-469847380">https://github.com/mailcow/mailcow-dockerized/issues/497#issuecomment-469847380</a> (DANKE!):</p>
 <p>Für alle, die mit der Hetzner-Firewall zu kämpfen haben:</p>
 <p>Port 53 ist in diesem Fall für die Firewall-Konfiguration unwichtig. Laut Dokumentation verwendet unbound den Portbereich 1024-65535 für ausgehende Anfragen.
 Da es sich bei der Hetzner Robot Firewall um eine statische Firewall handelt (jedes eingehende Paket wird isoliert geprüft) - müssen die folgenden Regeln angewendet werden:</p>
-<p><strong>Für TCP</strong></p>
-<pre><code>SRC-IP: ---
+<p><strong>Für TCP</strong>
+<div class="highlight"><pre><span></span><code>SRC-IP: ---
 DST-IP: ---
 SRC-Port: ---
 DST-Port: 1024-65535
 Protokoll: tcp
 TCP-Flags: ack
 Aktion:      Akzeptieren
-</code></pre>
-<p><strong>Für UDP</strong></p>
-<pre><code>SRC-IP: ---
+</code></pre></div></p>
+<p><strong>Für UDP</strong>
+<div class="highlight"><pre><span></span><code>SRC-IP: ---
 DST-IP: ---
 SRC-Port: ---
 DST-Port: 1024-65535
 Protokoll: udp
 Aktion:      Akzeptieren
-</code></pre>
+</code></pre></div></p>
 <p>Wenn man einen restriktiveren Portbereich anwenden will, muss man zuerst die Konfiguration von unbound ändern (nach der Installation):</p>
-<p>{mailcow-dockerized}/data/conf/unbound/unbound.conf:</p>
-<pre><code>ausgehender-Port-vermeiden: 0-32767
-</code></pre>
+<p>{mailcow-dockerized}/data/conf/unbound/unbound.conf:
+<div class="highlight"><pre><span></span><code>ausgehender-Port-vermeiden: 0-32767
+</code></pre></div></p>
 <p>Nun können die Firewall-Regeln wie folgt angepasst werden:</p>
-<pre><code>[...]
+<div class="highlight"><pre><span></span><code>[...]
 DST Port: 32768-65535
 [...]
-</code></pre>
+</code></pre></div>
 <h2 id="datum-und-uhrzeit">Datum und Uhrzeit<a class="headerlink" href="#datum-und-uhrzeit" title="Permanent link">&para;</a></h2>
 <p>Um sicherzustellen, dass Sie das richtige Datum und die richtige Zeit auf Ihrem System eingestellt haben, überprüfen Sie bitte die Ausgabe von <code>timedatectl status</code>:</p>
-<pre><code>$ timedatectl status
+<div class="highlight"><pre><span></span><code>$ timedatectl status
       Lokale Zeit: Sat 2017-05-06 02:12:33 CEST
   Weltzeit: Sa 2017-05-06 00:12:33 UTC
         RTC-Zeit: Sa 2017-05-06 00:12:32
@@ -2632,22 +2632,22 @@ NTP synchronisiert: ja
  Nächste Sommerzeitänderung: Die Sommerzeit endet (die Uhr springt eine Stunde rückwärts) am
                   Sun 2017-10-29 02:59:59 MESZ
                   Sun 2017-10-29 02:00:00 MEZ
-</code></pre>
+</code></pre></div>
 <p>Die Zeilen <code>NTP aktiviert: ja</code> und <code>NTP synchronisiert: ja</code> zeigen an, ob Sie NTP aktiviert haben und ob es synchronisiert ist.</p>
 <p>Um NTP zu aktivieren, müssen Sie den Befehl <code>timedatectl set-ntp true</code> ausführen. Sie müssen auch Ihre <code>/etc/systemd/timesyncd.conf</code> bearbeiten:</p>
-<pre><code># vim /etc/systemd/timesyncd.conf
+<div class="highlight"><pre><span></span><code># vim /etc/systemd/timesyncd.conf
 [Zeit]
 NTP=0.pool.ntp.org 1.pool.ntp.org 2.pool.ntp.org 3.pool.ntp.org
-</code></pre>
+</code></pre></div>
 <h2 id="hetzner-cloud-und-wahrscheinlich-andere">Hetzner Cloud (und wahrscheinlich andere)<a class="headerlink" href="#hetzner-cloud-und-wahrscheinlich-andere" title="Permanent link">&para;</a></h2>
 <p>Prüfen Sie <code>/etc/network/interfaces.d/50-cloud-init.cfg</code> und ändern Sie die IPv6-Schnittstelle von eth0:0 auf eth0:</p>
-<pre><code># Falsch:
+<div class="highlight"><pre><span></span><code># Falsch:
 auto eth0:0
 iface eth0:0 inet6 static
 # Richtig:
 auto eth0
 iface eth0 inet6 statisch
-</code></pre>
+</code></pre></div>
 <p>Starten Sie die Schnittstelle neu oder starten Sie sie neu.
 Vielleicht möchten Sie <a href="https://wiki.hetzner.de/index.php/Cloud_IP_static/en#disable_cloud-init_network_changes">cloud-init Netzwerkänderungen deaktivieren.</a></p>
 <h2 id="mtu">MTU<a class="headerlink" href="#mtu" title="Permanent link">&para;</a></h2>
