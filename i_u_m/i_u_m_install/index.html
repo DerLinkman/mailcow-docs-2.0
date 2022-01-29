@@ -2313,7 +2313,7 @@ If you are interested in how this works, you can check out the readme of <a href
 <div class="highlight"><pre><span></span><code>nano mailcow.conf
 </code></pre></div>
 If you plan to use a reverse proxy, you can, for example, bind HTTPS to 127.0.0.1 on port 8443 and HTTP to 127.0.0.1 on port 8080.</p>
-<p>You may need to stop an existing pre-installed MTA which blocks port 25/tcp. See <a href="https://mailcow.github.io/mailcow-dockerized-docs/firststeps-local_mta/">this chapter</a> to learn how to reconfigure Postfix to run besides mailcow after a successful installation.</p>
+<p>You may need to stop an existing pre-installed MTA which blocks port 25/tcp. See <a href="/post_installation/firststeps-local-mta.md">this chapter</a> to learn how to reconfigure Postfix to run besides mailcow after a successful installation.</p>
 <p>Some updates modify mailcow.conf and add new parameters. It is hard to keep track of them in the documentation. Please check their description and, if unsure, ask at the known channels for advise.</p>
 <p><strong>4.1.</strong> Users with a MTU not equal to 1500 (e.g. OpenStack):</p>
 <p><strong>Whenever you run into trouble and strange phenomena, please check your MTU.</strong></p>
@@ -2328,7 +2328,7 @@ Add the new driver_opts parameter like this:
 </code></pre></div></p>
 <p><strong>4.2.</strong> Users without an IPv6 enabled network on their host system:</p>
 <p><strong>Enable IPv6. Finally.</strong></p>
-<p>If you do not have an IPv6 enabled network on your host and you don't care for a better internet (thehe), it is recommended to <a href="https://mailcow.github.io/mailcow-dockerized-docs/firststeps-disable_ipv6/">disable IPv6</a> for the mailcow network to prevent unforeseen issues.</p>
+<p>If you do not have an IPv6 enabled network on your host and you don't care for a better internet (thehe), it is recommended to <a href="/post_installation/firststeps-disable_ipv6.md">disable IPv6</a> for the mailcow network to prevent unforeseen issues.</p>
 <p><strong>5.</strong> Pull the images and run the compose file. The parameter <code>-d</code> will start mailcow: dockerized detached:
 <div class="highlight"><pre><span></span><code>docker-compose pull
 docker-compose up -d
@@ -2337,7 +2337,7 @@ docker-compose up -d
 <p>You can now access <strong>https://${MAILCOW_HOSTNAME}</strong> with the default credentials <code>admin</code> + password <code>moohoo</code>.</p>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
-<p>If you are not using mailcow behind a reverse proxy, you should <a href="https://mailcow.github.io/mailcow-dockerized-docs/u_e-80_to_443/">redirect all HTTP requests to HTTPS</a>.</p>
+<p>If you are not using mailcow behind a reverse proxy, you should <a href="/u_e/80_to_443.md">redirect all HTTP requests to HTTPS</a>.</p>
 </div>
 <p>The database will be initialized right after a connection to MySQL can be established.</p>
 <p>Your data will persist in multiple Docker volumes, that are not deleted when you recreate or delete containers. Run <code>docker volume ls</code> to see a list of all volumes. You can safely run <code>docker-compose down</code> without removing persistent data.</p>
