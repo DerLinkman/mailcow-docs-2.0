@@ -6,6 +6,26 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://mailcow.github.io/mailcow-dockerized-docs/i_u_m/i_u_m_deinstall/</loc>
+         <lastmod>2022-01-29</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://mailcow.github.io/mailcow-dockerized-docs/i_u_m/i_u_m_install/</loc>
+         <lastmod>2022-01-29</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://mailcow.github.io/mailcow-dockerized-docs/i_u_m/i_u_m_migration/</loc>
+         <lastmod>2022-01-29</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://mailcow.github.io/mailcow-dockerized-docs/i_u_m/i_u_m_update/</loc>
+         <lastmod>2022-01-29</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://mailcow.github.io/mailcow-dockerized-docs/prerequisite/prerequisite-dns/</loc>
          <lastmod>2022-01-29</lastmod>
          <changefreq>daily</changefreq>
