@@ -1,6 +1,6 @@
 
 <!doctype html>
-<html lang="de" class="no-js">
+<html lang="en" class="no-js">
   <head>
     
       <meta charset="utf-8">
@@ -8,21 +8,21 @@
       
       
       
-        <link rel="canonical" href="https://mailcow.github.io/mailcow-dockerized-docs/de/en/prerequisite-system/">
+        <link rel="canonical" href="https://mailcow.github.io/mailcow-dockerized-docs/prerequisite/prerequisite-dns/">
       
-      <link rel="icon" href="../../../assets/images/favicon.png">
+      <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.1.8">
     
     
       
-        <title>Prerequisite system - mailcow: dockerized documentation</title>
+        <title>DNS setup - mailcow: dockerized documentation</title>
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.6e60f8b8.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.6e60f8b8.min.css">
       
         
-        <link rel="stylesheet" href="../../../assets/stylesheets/palette.e6a45f82.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.e6a45f82.min.css">
         
       
     
@@ -36,9 +36,9 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/css/extra.css">
+      <link rel="stylesheet" href="../../assets/css/extra.css">
     
-    <script>__md_scope=new URL("../../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -62,8 +62,8 @@
     <div data-md-component="skip">
       
         
-        <a href="#minimum-system-resources" class="md-skip">
-          Zum Inhalt
+        <a href="#references" class="md-skip">
+          Skip to content
         </a>
       
     </div>
@@ -76,9 +76,9 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../../.." title="mailcow: dockerized documentation" class="md-header__button md-logo" aria-label="mailcow: dockerized documentation" data-md-component="logo">
+    <a href="../.." title="mailcow: dockerized documentation" class="md-header__button md-logo" aria-label="mailcow: dockerized documentation" data-md-component="logo">
       
-  <img src="../../../assets/images/logo.svg" alt="logo">
+  <img src="../../assets/images/logo.svg" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -94,7 +94,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Prerequisite system
+              DNS setup
             
           </span>
         </div>
@@ -105,20 +105,20 @@
       <div class="md-header__option">
         <div class="md-select">
           
-          <button class="md-header__button md-icon" aria-label="Sprache wechseln">
+          <button class="md-header__button md-icon" aria-label="Select language">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.52 17.52 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11.76-2.04M18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2l-4.5-12m-2.62 7 1.62-4.33L19.12 17h-3.24z"/></svg>
           </button>
           <div class="md-select__inner">
             <ul class="md-select__list">
               
                 <li class="md-select__item">
-                  <a href="../../../en/prerequisite-system/" hreflang="en" class="md-select__link">
+                  <a href="./" hreflang="en" class="md-select__link">
                     English
                   </a>
                 </li>
                 
                 <li class="md-select__item">
-                  <a href="./" hreflang="de" class="md-select__link">
+                  <a href="../../de/prerequisite/prerequisite-dns/" hreflang="de" class="md-select__link">
                     Deutsch
                   </a>
                 </li>
@@ -136,14 +136,14 @@
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" aria-label="Suche" placeholder="Suche" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
       <label class="md-search__icon md-icon" for="__search">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
       </label>
-      <nav class="md-search__options" aria-label="Suche">
+      <nav class="md-search__options" aria-label="Search">
         
-        <button type="reset" class="md-search__icon md-icon" aria-label="Zurücksetzen" tabindex="-1">
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
         </button>
       </nav>
@@ -153,7 +153,7 @@
       <div class="md-search__scrollwrap" data-md-scrollfix>
         <div class="md-search-result" data-md-component="search-result">
           <div class="md-search-result__meta">
-            Suche wird initialisiert
+            Initializing search
           </div>
           <ol class="md-search-result__list"></ol>
         </div>
@@ -164,7 +164,7 @@
     
     
       <div class="md-header__source">
-        <a href="https://github.com/mailcow/mailcow-dockerized/" title="Quellcode" class="md-source" data-md-component="source">
+        <a href="https://github.com/mailcow/mailcow-dockerized/" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
@@ -199,16 +199,16 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../.." title="mailcow: dockerized documentation" class="md-nav__button md-logo" aria-label="mailcow: dockerized documentation" data-md-component="logo">
+    <a href="../.." title="mailcow: dockerized documentation" class="md-nav__button md-logo" aria-label="mailcow: dockerized documentation" data-md-component="logo">
       
-  <img src="../../../assets/images/logo.svg" alt="logo">
+  <img src="../../assets/images/logo.svg" alt="logo">
 
     </a>
     mailcow: dockerized documentation
   </label>
   
     <div class="md-nav__source">
-      <a href="https://github.com/mailcow/mailcow-dockerized/" title="Quellcode" class="md-source" data-md-component="source">
+      <a href="https://github.com/mailcow/mailcow-dockerized/" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
@@ -229,8 +229,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../index.md" class="md-nav__link">
-        Informationen & Support
+      <a href="../../index.md" class="md-nav__link">
+        Information & Support
       </a>
     </li>
   
@@ -242,25 +242,27 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
       
       
       
       
         <label class="md-nav__link" for="__nav_2">
-          Voraussetzungen
+          Prerequisites
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="Voraussetzungen" data-md-level="1">
+      <nav class="md-nav" aria-label="Prerequisites" data-md-level="1">
         <label class="md-nav__title" for="__nav_2">
           <span class="md-nav__icon md-icon"></span>
-          Voraussetzungen
+          Prerequisites
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -270,8 +272,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../prerequisite-system.md" class="md-nav__link">
-        Systemvoraussetzungen
+      <a href="../prerequisite-system/" class="md-nav__link">
+        Prepare your system
       </a>
     </li>
   
@@ -282,11 +284,117 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../../../prerequisite-dns.md" class="md-nav__link">
-        DNS Einstellungen
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          DNS setup
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        DNS setup
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    References
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reverse-dns-of-your-ip-address" class="md-nav__link">
+    Reverse DNS of your IP address
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-minimal-dns-configuration" class="md-nav__link">
+    The minimal DNS configuration
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dkim-spf-and-dmarc" class="md-nav__link">
+    DKIM, SPF and DMARC
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-advanced-dns-configuration" class="md-nav__link">
+    The advanced DNS configuration
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#testing" class="md-nav__link">
+    Testing
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#misc" class="md-nav__link">
+    Misc
+  </a>
+  
+    <nav class="md-nav" aria-label="Misc">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#optional-dmarc-statistics" class="md-nav__link">
+    Optional DMARC Statistics
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#email-test-for-spf-dkim-and-dmarc" class="md-nav__link">
+    Email test for SPF, DKIM and DMARC:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fully-qualified-domain-name-fqdn" class="md-nav__link">
+    Fully Qualified Domain Name (FQDN)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -315,14 +423,14 @@
       
       
         <label class="md-nav__link" for="__nav_3">
-          Installation, Update und Migration
+          Installation, Update & Migration
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="Installation, Update und Migration" data-md-level="1">
+      <nav class="md-nav" aria-label="Installation, Update & Migration" data-md-level="1">
         <label class="md-nav__title" for="__nav_3">
           <span class="md-nav__icon md-icon"></span>
-          Installation, Update und Migration
+          Installation, Update & Migration
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -332,7 +440,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../i_u_m_install.md" class="md-nav__link">
+      <a href="../../i_u_m_install.md" class="md-nav__link">
         Installation
       </a>
     </li>
@@ -346,7 +454,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../i_u_m_update.md" class="md-nav__link">
+      <a href="../../i_u_m_update.md" class="md-nav__link">
         Update
       </a>
     </li>
@@ -360,7 +468,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../i_u_m_migration.md" class="md-nav__link">
+      <a href="../../i_u_m_migration.md" class="md-nav__link">
         Migration
       </a>
     </li>
@@ -374,7 +482,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../i_u_m_deinstall.md" class="md-nav__link">
+      <a href="../../i_u_m_deinstall.md" class="md-nav__link">
         Deinstallation
       </a>
     </li>
@@ -405,14 +513,14 @@
       
       
         <label class="md-nav__link" for="__nav_4">
-          Post-Installationsaufgaben
+          Post Installation Tasks
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="Post-Installationsaufgaben" data-md-level="1">
+      <nav class="md-nav" aria-label="Post Installation Tasks" data-md-level="1">
         <label class="md-nav__title" for="__nav_4">
           <span class="md-nav__icon md-icon"></span>
-          Post-Installationsaufgaben
+          Post Installation Tasks
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -422,8 +530,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../firststeps-ssl.md" class="md-nav__link">
-        Erweitertes SSL
+      <a href="../../firststeps-ssl.md" class="md-nav__link">
+        Advanced SSL
       </a>
     </li>
   
@@ -436,8 +544,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../firststeps-disable_ipv6.md" class="md-nav__link">
-        IPv6 deaktivieren
+      <a href="../../firststeps-disable_ipv6.md" class="md-nav__link">
+        Disable IPv6
       </a>
     </li>
   
@@ -450,7 +558,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../firststeps-dmarc_reporting.md" class="md-nav__link">
+      <a href="../../firststeps-dmarc_reporting.md" class="md-nav__link">
         DMARC Reporting
       </a>
     </li>
@@ -464,8 +572,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../firststeps-ip_bindings.md" class="md-nav__link">
-        IP-Verbindungen
+      <a href="../../firststeps-ip_bindings.md" class="md-nav__link">
+        IP bindings
       </a>
     </li>
   
@@ -478,8 +586,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../firststeps-local_mta.md" class="md-nav__link">
-        Lokaler MTA auf Docker-Host
+      <a href="../../firststeps-local_mta.md" class="md-nav__link">
+        Local MTA on Docker host
       </a>
     </li>
   
@@ -492,7 +600,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../firststeps-logging.md" class="md-nav__link">
+      <a href="../../firststeps-logging.md" class="md-nav__link">
         Logging
       </a>
     </li>
@@ -506,7 +614,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../firststeps-rp.md" class="md-nav__link">
+      <a href="../../firststeps-rp.md" class="md-nav__link">
         Reverse Proxy
       </a>
     </li>
@@ -520,7 +628,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../firststeps-rspamd_ui.md" class="md-nav__link">
+      <a href="../../firststeps-rspamd_ui.md" class="md-nav__link">
         Rspamd UI
       </a>
     </li>
@@ -534,7 +642,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../firststeps-snat.md" class="md-nav__link">
+      <a href="../../firststeps-snat.md" class="md-nav__link">
         SNAT
       </a>
     </li>
@@ -548,8 +656,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../firststeps-sync_jobs_migration.md" class="md-nav__link">
-        Migration von Sync-Jobs
+      <a href="../../firststeps-sync_jobs_migration.md" class="md-nav__link">
+        Sync job migration
       </a>
     </li>
   
@@ -579,14 +687,14 @@
       
       
         <label class="md-nav__link" for="__nav_5">
-          Modelle
+          Models
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="Modelle" data-md-level="1">
+      <nav class="md-nav" aria-label="Models" data-md-level="1">
         <label class="md-nav__title" for="__nav_5">
           <span class="md-nav__icon md-icon"></span>
-          Modelle
+          Models
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -596,7 +704,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../model-acl.md" class="md-nav__link">
+      <a href="../../model-acl.md" class="md-nav__link">
         ACL
       </a>
     </li>
@@ -610,8 +718,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../model-passwd.md" class="md-nav__link">
-        Passwort-Hashing
+      <a href="../../model-passwd.md" class="md-nav__link">
+        Password hashing
       </a>
     </li>
   
@@ -624,8 +732,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../model-sender_rcv.md" class="md-nav__link">
-        Sender- und Empfängermodell
+      <a href="../../model-sender_rcv.md" class="md-nav__link">
+        Sender and receiver model
       </a>
     </li>
   
@@ -655,14 +763,14 @@
       
       
         <label class="md-nav__link" for="__nav_6">
-          Allgemeine Fehlersuche
+          General Troubleshooting
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="Allgemeine Fehlersuche" data-md-level="1">
+      <nav class="md-nav" aria-label="General Troubleshooting" data-md-level="1">
         <label class="md-nav__title" for="__nav_6">
           <span class="md-nav__icon md-icon"></span>
-          Allgemeine Fehlersuche
+          General Troubleshooting
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -672,8 +780,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../debug.md" class="md-nav__link">
-        Einführung
+      <a href="../../debug.md" class="md-nav__link">
+        Introduction
       </a>
     </li>
   
@@ -686,8 +794,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../debug-admin_login_sogo.md" class="md-nav__link">
-        Admin-Anmeldung bei SOGo
+      <a href="../../debug-admin_login_sogo.md" class="md-nav__link">
+        Admin login to SOGo
       </a>
     </li>
   
@@ -700,8 +808,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../debug-asan_rspamd.md" class="md-nav__link">
-        Fortgeschritten: Memory-Leaks in Rspamd finden
+      <a href="../../debug-asan_rspamd.md" class="md-nav__link">
+        Advanced: Find memory leaks in Rspamd
       </a>
     </li>
   
@@ -714,8 +822,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../debug-attach_service.md" class="md-nav__link">
-        Einen Container anhängen
+      <a href="../../debug-attach_service.md" class="md-nav__link">
+        Attach a Container
       </a>
     </li>
   
@@ -728,8 +836,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../debug-common_problems.md" class="md-nav__link">
-        Häufig auftretende Probleme
+      <a href="../../debug-common_problems.md" class="md-nav__link">
+        Common Problems
       </a>
     </li>
   
@@ -742,7 +850,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../debug-logs.md" class="md-nav__link">
+      <a href="../../debug-logs.md" class="md-nav__link">
         Logs
       </a>
     </li>
@@ -756,8 +864,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../debug-mysql_upgrade.md" class="md-nav__link">
-        Manuelles MySQL-Upgrade
+      <a href="../../debug-mysql_upgrade.md" class="md-nav__link">
+        Manual MySQL upgrade
       </a>
     </li>
   
@@ -770,8 +878,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../debug-mysql_aria.md" class="md-nav__link">
-        Abgestürzte Aria-Speicher-Engine wiederherstellen
+      <a href="../../debug-mysql_aria.md" class="md-nav__link">
+        Recover crashed Aria storage engine
       </a>
     </li>
   
@@ -784,8 +892,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../debug-rm_volumes.md" class="md-nav__link">
-        Persistente Daten löschen
+      <a href="../../debug-rm_volumes.md" class="md-nav__link">
+        Remove Persistent Data
       </a>
     </li>
   
@@ -798,8 +906,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../debug-reset_pw.md" class="md-nav__link">
-        Passwörter zurücksetzen (inkl. SQL)
+      <a href="../../debug-reset_pw.md" class="md-nav__link">
+        Reset Passwords (incl. SQL)
       </a>
     </li>
   
@@ -812,8 +920,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../debug-reset_tls.md" class="md-nav__link">
-        TLS-Zertifikate zurücksetzen
+      <a href="../../debug-reset_tls.md" class="md-nav__link">
+        Reset TLS certificates
       </a>
     </li>
   
@@ -843,14 +951,14 @@
       
       
         <label class="md-nav__link" for="__nav_7">
-          Sichern & Wiederherstellen
+          Backup & Restore
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="Sichern & Wiederherstellen" data-md-level="1">
+      <nav class="md-nav" aria-label="Backup & Restore" data-md-level="1">
         <label class="md-nav__title" for="__nav_7">
           <span class="md-nav__icon md-icon"></span>
-          Sichern & Wiederherstellen
+          Backup & Restore
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -869,14 +977,14 @@
       
       
         <label class="md-nav__link" for="__nav_7_1">
-          Sicherung und Wiederherstellung von Komponenten
+          Component backup & restore
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="Sicherung und Wiederherstellung von Komponenten" data-md-level="2">
+      <nav class="md-nav" aria-label="Component backup & restore" data-md-level="2">
         <label class="md-nav__title" for="__nav_7_1">
           <span class="md-nav__icon md-icon"></span>
-          Sicherung und Wiederherstellung von Komponenten
+          Component backup & restore
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -886,8 +994,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../b_n_r-backup.md" class="md-nav__link">
-        Sicherung
+      <a href="../../b_n_r-backup.md" class="md-nav__link">
+        Backup
       </a>
     </li>
   
@@ -900,8 +1008,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../b_n_r-restore.md" class="md-nav__link">
-        Wiederherstellung
+      <a href="../../b_n_r-restore.md" class="md-nav__link">
+        Restore
       </a>
     </li>
   
@@ -921,8 +1029,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../b_n_r-coldstandby.md" class="md-nav__link">
-        Cold-standby (rollende Sicherung)
+      <a href="../../b_n_r-coldstandby.md" class="md-nav__link">
+        Cold-standby (rolling backup)
       </a>
     </li>
   
@@ -944,14 +1052,14 @@
       
       
         <label class="md-nav__link" for="__nav_7_3">
-          Manuelle Sicherung
+          Manual backups
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="Manuelle Sicherung" data-md-level="2">
+      <nav class="md-nav" aria-label="Manual backups" data-md-level="2">
         <label class="md-nav__title" for="__nav_7_3">
           <span class="md-nav__icon md-icon"></span>
-          Manuelle Sicherung
+          Manual backups
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -961,8 +1069,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../u_e-backup_restore-maildir.md" class="md-nav__link">
-        Mail-Verzeichnis
+      <a href="../../u_e-backup_restore-maildir.md" class="md-nav__link">
+        Maildir
       </a>
     </li>
   
@@ -975,7 +1083,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../u_e-backup_restore-mysql.md" class="md-nav__link">
+      <a href="../../u_e-backup_restore-mysql.md" class="md-nav__link">
         MySQL (mysqldump)
       </a>
     </li>
@@ -1005,14 +1113,14 @@
       
       
         <label class="md-nav__link" for="__nav_7_4">
-          Interne mailcow Sicherungen
+          mailcow-internal backups
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="Interne mailcow Sicherungen" data-md-level="2">
+      <nav class="md-nav" aria-label="mailcow-internal backups" data-md-level="2">
         <label class="md-nav__title" for="__nav_7_4">
           <span class="md-nav__icon md-icon"></span>
-          Interne mailcow Sicherungen
+          mailcow-internal backups
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -1022,8 +1130,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../b_n_r-accidental_deletion.md" class="md-nav__link">
-        Versehentlich gelöschte Daten wiederherstellen
+      <a href="../../b_n_r-accidental_deletion.md" class="md-nav__link">
+        Recover accidentally deleted data
       </a>
     </li>
   
@@ -1060,14 +1168,14 @@
       
       
         <label class="md-nav__link" for="__nav_8">
-          Anleitungen/Beispiele
+          Manual/Guides/Examples
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="Anleitungen/Beispiele" data-md-level="1">
+      <nav class="md-nav" aria-label="Manual/Guides/Examples" data-md-level="1">
         <label class="md-nav__title" for="__nav_8">
           <span class="md-nav__icon md-icon"></span>
-          Anleitungen/Beispiele
+          Manual/Guides/Examples
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -1103,7 +1211,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../u_e-mailcow_ui-bl_wl.md" class="md-nav__link">
+      <a href="../../u_e-mailcow_ui-bl_wl.md" class="md-nav__link">
         Blacklist / Whitelist
       </a>
     </li>
@@ -1117,8 +1225,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../u_e-mailcow_ui-config.md" class="md-nav__link">
-        Konfiguration
+      <a href="../../u_e-mailcow_ui-config.md" class="md-nav__link">
+        Configuration
       </a>
     </li>
   
@@ -1131,8 +1239,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../u_e-mailcow_ui-css.md" class="md-nav__link">
-        CSS-Überschreibungen
+      <a href="../../u_e-mailcow_ui-css.md" class="md-nav__link">
+        CSS overrides
       </a>
     </li>
   
@@ -1145,7 +1253,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../u_e-mailcow_ui-pushover.md" class="md-nav__link">
+      <a href="../../u_e-mailcow_ui-pushover.md" class="md-nav__link">
         Pushover
       </a>
     </li>
@@ -1159,7 +1267,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../u_e-mailcow_ui-spamfilter.md" class="md-nav__link">
+      <a href="../../u_e-mailcow_ui-spamfilter.md" class="md-nav__link">
         Spamfilter
       </a>
     </li>
@@ -1173,8 +1281,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../u_e-mailcow_ui-tagging.md" class="md-nav__link">
-        Tagging (Markierungen)
+      <a href="../../u_e-mailcow_ui-tagging.md" class="md-nav__link">
+        Tagging
       </a>
     </li>
   
@@ -1187,8 +1295,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../u_e-mailcow_ui-spamalias.md" class="md-nav__link">
-        Temporäre E-Mail-Aliase
+      <a href="../../u_e-mailcow_ui-spamalias.md" class="md-nav__link">
+        Temporary email aliases
       </a>
     </li>
   
@@ -1201,8 +1309,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../u_e-mailcow_ui-tfa.md" class="md-nav__link">
-        Zwei-Faktoren-Authentifizierung
+      <a href="../../u_e-mailcow_ui-tfa.md" class="md-nav__link">
+        Two-Factor Authentication
       </a>
     </li>
   
@@ -1215,7 +1323,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../u_e-fido2.md" class="md-nav__link">
+      <a href="../../u_e-fido2.md" class="md-nav__link">
         WebAuthn / FIDO2
       </a>
     </li>
@@ -1262,8 +1370,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../u_e-postfix-trust_networks.md" class="md-nav__link">
-        Vertrauenswürdige Netzwerke hinzufügen
+      <a href="../../u_e-postfix-trust_networks.md" class="md-nav__link">
+        Add trusted networks
       </a>
     </li>
   
@@ -1276,8 +1384,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../u_e-postfix-custom_transport.md" class="md-nav__link">
-        Benutzerdefinierte Transportmaps
+      <a href="../../u_e-postfix-custom_transport.md" class="md-nav__link">
+        Custom transport maps
       </a>
     </li>
   
@@ -1290,8 +1398,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../u_e-postfix-extra_cf.md" class="md-nav__link">
-        main.cf anpassen/erweitern
+      <a href="../../u_e-postfix-extra_cf.md" class="md-nav__link">
+        Customize/Expand main.cf
       </a>
     </li>
   
@@ -1304,8 +1412,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../u_e-postfix-disable_sender_verification.md" class="md-nav__link">
-        Überprüfung der Absenderadressen deaktivieren
+      <a href="../../u_e-postfix-disable_sender_verification.md" class="md-nav__link">
+        Disable Sender Addresses Verification
       </a>
     </li>
   
@@ -1318,8 +1426,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../u_e-postfix-attachment_size.md" class="md-nav__link">
-        Maximale Nachrichtengröße (Größe des Anhangs)
+      <a href="../../u_e-postfix-attachment_size.md" class="md-nav__link">
+        Max. message size (attachment size)
       </a>
     </li>
   
@@ -1332,7 +1440,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../u_e-postfix-relayhost.md" class="md-nav__link">
+      <a href="../../u_e-postfix-relayhost.md" class="md-nav__link">
         Relayhosts
       </a>
     </li>
@@ -1346,8 +1454,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../u_e-postfix-pflogsumm.md" class="md-nav__link">
-        Statistik mit pflogsumm
+      <a href="../../u_e-postfix-pflogsumm.md" class="md-nav__link">
+        Statistics with pflogsumm
       </a>
     </li>
   
@@ -1360,8 +1468,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../u_e-postfix-postscreen_whitelist.md" class="md-nav__link">
-        IP in Postscreen auf die Whitelist setzen
+      <a href="../../u_e-postfix-postscreen_whitelist.md" class="md-nav__link">
+        Whitelist IP in Postscreen
       </a>
     </li>
   
@@ -1407,8 +1515,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../u_e-unbound-fwd.md" class="md-nav__link">
-        Verwendung eines externen DNS-Dienstes
+      <a href="../../u_e-unbound-fwd.md" class="md-nav__link">
+        Using an external DNS service
       </a>
     </li>
   
@@ -1454,8 +1562,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../u_e-dovecot-extra_conf.md" class="md-nav__link">
-        Anpassen/Erweitern von dovecot.conf
+      <a href="../../u_e-dovecot-extra_conf.md" class="md-nav__link">
+        Customize/Expand dovecot.conf
       </a>
     </li>
   
@@ -1468,8 +1576,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../u_e-dovecot-any_acl.md" class="md-nav__link">
-        Aktivierung von "any" ACL-Einstellungen
+      <a href="../../u_e-dovecot-any_acl.md" class="md-nav__link">
+        Enable "any" ACL settings
       </a>
     </li>
   
@@ -1482,8 +1590,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../u_e-dovecot-expunge.md" class="md-nav__link">
-        Löschen der Mails eines Benutzers
+      <a href="../../u_e-dovecot-expunge.md" class="md-nav__link">
+        Expunge a Users mails
       </a>
     </li>
   
@@ -1496,7 +1604,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../u_e-dovecot-fts.md" class="md-nav__link">
+      <a href="../../u_e-dovecot-fts.md" class="md-nav__link">
         FTS (Solr)
       </a>
     </li>
@@ -1510,8 +1618,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../u_e-dovecot-idle_interval.md" class="md-nav__link">
-        IMAP IDLE-Intervall
+      <a href="../../u_e-dovecot-idle_interval.md" class="md-nav__link">
+        IMAP IDLE interval
       </a>
     </li>
   
@@ -1524,7 +1632,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../u_e-dovecot-mail-crypt.md" class="md-nav__link">
+      <a href="../../u_e-dovecot-mail-crypt.md" class="md-nav__link">
         Mail crypt
       </a>
     </li>
@@ -1538,8 +1646,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../u_e-dovecot-more.md" class="md-nav__link">
-        Weitere Beispiele mit DOVEADM
+      <a href="../../u_e-dovecot-more.md" class="md-nav__link">
+        More Examples with DOVEADM
       </a>
     </li>
   
@@ -1552,8 +1660,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../u_e-dovecot-vmail-volume.md" class="md-nav__link">
-        Maildir verschieben (vmail)
+      <a href="../../u_e-dovecot-vmail-volume.md" class="md-nav__link">
+        Move Maildir (vmail)
       </a>
     </li>
   
@@ -1566,8 +1674,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../u_e-dovecot-public_folder.md" class="md-nav__link">
-        Öffentliche Ordner
+      <a href="../../u_e-dovecot-public_folder.md" class="md-nav__link">
+        Public folders
       </a>
     </li>
   
@@ -1580,8 +1688,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../u_e-dovecot-static_master.md" class="md-nav__link">
-        Statischer Hauptbenutzer
+      <a href="../../u_e-dovecot-static_master.md" class="md-nav__link">
+        Static master user
       </a>
     </li>
   
@@ -1594,8 +1702,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../u_e-dovecot-catchall_vacation.md" class="md-nav__link">
-        Urlaubsantworten für Catchall-Adressen
+      <a href="../../u_e-dovecot-catchall_vacation.md" class="md-nav__link">
+        Vacation replies for catchall addresses
       </a>
     </li>
   
@@ -1641,8 +1749,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../u_e-webmail-site.md" class="md-nav__link">
-        Subdomäne webmail.example.org erstellen
+      <a href="../../u_e-webmail-site.md" class="md-nav__link">
+        Create subdomain webmail.example.org
       </a>
     </li>
   
@@ -1655,8 +1763,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../u_e-nginx.md" class="md-nav__link">
-        Benutzerdefinierte Seiten
+      <a href="../../u_e-nginx.md" class="md-nav__link">
+        Custom sites
       </a>
     </li>
   
@@ -1702,8 +1810,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../u_e-watchdog-thresholds.md" class="md-nav__link">
-        Schwellenwert
+      <a href="../../u_e-watchdog-thresholds.md" class="md-nav__link">
+        Thresholds
       </a>
     </li>
   
@@ -1723,7 +1831,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../u_e-redis.md" class="md-nav__link">
+      <a href="../../u_e-redis.md" class="md-nav__link">
         Redis
       </a>
     </li>
@@ -1737,7 +1845,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../u_e-rspamd.md" class="md-nav__link">
+      <a href="../../u_e-rspamd.md" class="md-nav__link">
         Rspamd
       </a>
     </li>
@@ -1751,7 +1859,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../u_e-sogo.md" class="md-nav__link">
+      <a href="../../u_e-sogo.md" class="md-nav__link">
         SOGo
       </a>
     </li>
@@ -1791,8 +1899,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../u_e-docker-cust_dockerfiles.md" class="md-nav__link">
-        Dockerfiles anpassen
+      <a href="../../u_e-docker-cust_dockerfiles.md" class="md-nav__link">
+        Customize Dockerfiles
       </a>
     </li>
   
@@ -1805,7 +1913,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../u_e-docker-dc_bash_compl.md" class="md-nav__link">
+      <a href="../../u_e-docker-dc_bash_compl.md" class="md-nav__link">
         Docker Compose Bash Completion
       </a>
     </li>
@@ -1826,8 +1934,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../u_e-why_unbound.md" class="md-nav__link">
-        Warum unbound?
+      <a href="../../u_e-why_unbound.md" class="md-nav__link">
+        Why unbound?
       </a>
     </li>
   
@@ -1840,7 +1948,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../u_e-autodiscover_config.md" class="md-nav__link">
+      <a href="../../u_e-autodiscover_config.md" class="md-nav__link">
         Autodiscover / Autoconfig
       </a>
     </li>
@@ -1854,8 +1962,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../u_e-80_to_443.md" class="md-nav__link">
-        HTTP auf HTTPS umleiten
+      <a href="../../u_e-80_to_443.md" class="md-nav__link">
+        Redirect HTTP to HTTPS
       </a>
     </li>
   
@@ -1868,8 +1976,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../u_e-reeanble-weak-protocols.md" class="md-nav__link">
-        TLS 1.0 und TLS 1.1 wieder aktivieren
+      <a href="../../u_e-reeanble-weak-protocols.md" class="md-nav__link">
+        Re-enable TLS 1.0 and TLS 1.1
       </a>
     </li>
   
@@ -1882,8 +1990,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../u_e-update-hooks.md" class="md-nav__link">
-        Skripte vor und nach Aktualisierungen ausführen
+      <a href="../../u_e-update-hooks.md" class="md-nav__link">
+        Run scripts before and after updates
       </a>
     </li>
   
@@ -1913,14 +2021,14 @@
       
       
         <label class="md-nav__link" for="__nav_9">
-          Client-Konfiguration
+          Client Configuration
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="Client-Konfiguration" data-md-level="1">
+      <nav class="md-nav" aria-label="Client Configuration" data-md-level="1">
         <label class="md-nav__title" for="__nav_9">
           <span class="md-nav__icon md-icon"></span>
-          Client-Konfiguration
+          Client Configuration
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -1930,8 +2038,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../client.md" class="md-nav__link">
-        Übersicht
+      <a href="../../client.md" class="md-nav__link">
+        Overview
       </a>
     </li>
   
@@ -1944,7 +2052,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../client/client-android.md" class="md-nav__link">
+      <a href="../../client/client-android.md" class="md-nav__link">
         Android
       </a>
     </li>
@@ -1958,7 +2066,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../client/client-apple.md" class="md-nav__link">
+      <a href="../../client/client-apple.md" class="md-nav__link">
         Apple macOS / iOS
       </a>
     </li>
@@ -1972,7 +2080,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../client/client-emclient.md" class="md-nav__link">
+      <a href="../../client/client-emclient.md" class="md-nav__link">
         eM Client
       </a>
     </li>
@@ -1986,7 +2094,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../client/client-kontact.md" class="md-nav__link">
+      <a href="../../client/client-kontact.md" class="md-nav__link">
         KDE Kontact
       </a>
     </li>
@@ -2000,7 +2108,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../client/client-outlook.md" class="md-nav__link">
+      <a href="../../client/client-outlook.md" class="md-nav__link">
         Microsoft Outlook
       </a>
     </li>
@@ -2014,7 +2122,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../client/client-thunderbird.md" class="md-nav__link">
+      <a href="../../client/client-thunderbird.md" class="md-nav__link">
         Mozilla Thunderbird
       </a>
     </li>
@@ -2028,7 +2136,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../client/client-windows.md" class="md-nav__link">
+      <a href="../../client/client-windows.md" class="md-nav__link">
         Windows Mail
       </a>
     </li>
@@ -2042,7 +2150,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../client/client-windowsphone.md" class="md-nav__link">
+      <a href="../../client/client-windowsphone.md" class="md-nav__link">
         Windows Phone
       </a>
     </li>
@@ -2056,8 +2164,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../client/client-manual.md" class="md-nav__link">
-        Manuelle Konfiguration
+      <a href="../../client/client-manual.md" class="md-nav__link">
+        Manual configuration
       </a>
     </li>
   
@@ -2087,14 +2195,14 @@
       
       
         <label class="md-nav__link" for="__nav_10">
-          Anwendungen von Drittanbietern
+          Third party apps
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="Anwendungen von Drittanbietern" data-md-level="1">
+      <nav class="md-nav" aria-label="Third party apps" data-md-level="1">
         <label class="md-nav__title" for="__nav_10">
           <span class="md-nav__icon md-icon"></span>
-          Anwendungen von Drittanbietern
+          Third party apps
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -2104,8 +2212,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../third_party-borgmatic.md" class="md-nav__link">
-        Borgmatic-Sicherung
+      <a href="../../third_party-borgmatic.md" class="md-nav__link">
+        Borgmatic Backup
       </a>
     </li>
   
@@ -2118,7 +2226,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../third_party-exchange_onprem.md" class="md-nav__link">
+      <a href="../../third_party-exchange_onprem.md" class="md-nav__link">
         Exchange Hybrid Setup
       </a>
     </li>
@@ -2132,7 +2240,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../third_party-gitea.md" class="md-nav__link">
+      <a href="../../third_party-gitea.md" class="md-nav__link">
         Gitea
       </a>
     </li>
@@ -2146,7 +2254,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../third_party-gogs.md" class="md-nav__link">
+      <a href="../../third_party-gogs.md" class="md-nav__link">
         Gogs
       </a>
     </li>
@@ -2160,7 +2268,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../third_party-mailman3.md" class="md-nav__link">
+      <a href="../../third_party-mailman3.md" class="md-nav__link">
         Mailman 3
       </a>
     </li>
@@ -2174,7 +2282,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../third_party-mailpiler_integration.md" class="md-nav__link">
+      <a href="../../third_party-mailpiler_integration.md" class="md-nav__link">
         Mailpiler Integration
       </a>
     </li>
@@ -2188,7 +2296,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../third_party-nextcloud.md" class="md-nav__link">
+      <a href="../../third_party-nextcloud.md" class="md-nav__link">
         Nextcloud
       </a>
     </li>
@@ -2202,7 +2310,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../third_party-portainer.md" class="md-nav__link">
+      <a href="../../third_party-portainer.md" class="md-nav__link">
         Portainer
       </a>
     </li>
@@ -2216,7 +2324,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../third_party-roundcube.md" class="md-nav__link">
+      <a href="../../third_party-roundcube.md" class="md-nav__link">
         Roundcube
       </a>
     </li>
@@ -2243,82 +2351,90 @@
                   <div class="md-sidebar__inner">
                     
 
-<nav class="md-nav md-nav--secondary" aria-label="Inhaltsverzeichnis">
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
   
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
-      Inhaltsverzeichnis
+      Table of contents
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#minimum-system-resources" class="md-nav__link">
-    Minimum System Resources
+  <a href="#references" class="md-nav__link">
+    References
   </a>
   
-    <nav class="md-nav" aria-label="Minimum System Resources">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reverse-dns-of-your-ip-address" class="md-nav__link">
+    Reverse DNS of your IP address
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-minimal-dns-configuration" class="md-nav__link">
+    The minimal DNS configuration
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dkim-spf-and-dmarc" class="md-nav__link">
+    DKIM, SPF and DMARC
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-advanced-dns-configuration" class="md-nav__link">
+    The advanced DNS configuration
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#testing" class="md-nav__link">
+    Testing
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#misc" class="md-nav__link">
+    Misc
+  </a>
+  
+    <nav class="md-nav" aria-label="Misc">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#usage-examples" class="md-nav__link">
-    Usage examples
+  <a href="#optional-dmarc-statistics" class="md-nav__link">
+    Optional DMARC Statistics
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#email-test-for-spf-dkim-and-dmarc" class="md-nav__link">
+    Email test for SPF, DKIM and DMARC:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fully-qualified-domain-name-fqdn" class="md-nav__link">
+    Fully Qualified Domain Name (FQDN)
   </a>
   
 </li>
         
       </ul>
     </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#firewall-ports" class="md-nav__link">
-    Firewall &amp; Ports
-  </a>
-  
-    <nav class="md-nav" aria-label="Firewall &amp; Ports">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#default-ports" class="md-nav__link">
-    Default Ports
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#important-for-hetzner-firewalls" class="md-nav__link">
-    Important for Hetzner firewalls
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#date-and-time" class="md-nav__link">
-    Date and Time
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#hetzner-cloud-and-probably-others" class="md-nav__link">
-    Hetzner Cloud (and probably others)
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#mtu" class="md-nav__link">
-    MTU
-  </a>
   
 </li>
       
@@ -2334,224 +2450,111 @@
             <article class="md-content__inner md-typeset">
               
                 
-<a href="https://github.com/mailcow/mailcow-dockerized-docs/edit/master/docs/en/prerequisite-system.en.md" title="Seite editieren" class="md-content__button md-icon">
+<a href="https://github.com/mailcow/mailcow-dockerized-docs/edit/master/docs/prerequisite/prerequisite-dns.en.md" title="Edit this page" class="md-content__button md-icon">
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
 </a>
 
 
-  <h1>Prerequisite system</h1>
+  <h1>DNS setup</h1>
 
-<p>Before you run <strong>mailcow: dockerized</strong>, there are a few requirements that you should check:</p>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>Do <strong>not</strong> try to install mailcow on a Synology/QNAP device (any NAS), OpenVZ, LXC or other container platforms. KVM, ESX, Hyper-V and other full virtualization platforms are supported.</p>
-</div>
-<div class="admonition info">
-<p class="admonition-title">Info</p>
+<p>Below you can find a list of <strong>recommended DNS records</strong>. While some are mandatory for a mail server (A, MX), others are recommended to build a good reputation score (TXT/SPF) or used for auto-configuration of mail clients (SRV).</p>
+<h2 id="references">References<a class="headerlink" href="#references" title="Permanent link">&para;</a></h2>
 <ul>
-<li>mailcow: dockerized requires <a href="#default-ports">some ports</a> to be open for incoming connections, so make sure that your firewall is not blocking these.</li>
-<li>Make sure that no other application is interfering with mailcow's configuration, such as another mail service</li>
-<li>A correct DNS setup is crucial to every good mailserver setup, so please make sure you got at least the <a href="../prerequisite-dns#the-minimal-dns-configuration">basics</a> covered before you begin!</li>
-<li>Make sure that your system has a correct date and <a href="#date-and-time">time setup</a>. This is crucial for various components like two factor TOTP authentication.</li>
+<li>A good article covering all relevant topics:
+  <a href="https://www.rackaid.com/blog/email-dns-records">"3 DNS Records Every Email Marketer Must Know"</a></li>
+<li>Another great one, but Zimbra as an example platform:
+  <a href="https://wiki.zimbra.com/wiki/Best_Practices_on_Email_Protection:_SPF,_DKIM_and_DMARC">"Best Practices on Email Protection: SPF, DKIM and DMARC"</a></li>
+<li>An in-depth discussion of SPF, DKIM and DMARC:
+  <a href="https://www.skelleton.net/2015/03/21/how-to-eliminate-spam-and-protect-your-name-with-dmarc/">"How to eliminate spam and protect your name with DMARC"</a></li>
+<li>A thorough guide on understanding DMARC:
+<a href="https://seanthegeek.net/459/demystifying-dmarc/">"Demystifying DMARC: A guide to preventing email spoofing"</a></li>
 </ul>
+<h2 id="reverse-dns-of-your-ip-address">Reverse DNS of your IP address<a class="headerlink" href="#reverse-dns-of-your-ip-address" title="Permanent link">&para;</a></h2>
+<p>Make sure that the PTR record of your IP address matches the FQDN of your mailcow host: <code>${MAILCOW_HOSTNAME}</code> [^1]. This record is usually set at the provider you leased the IP address (server) from.</p>
+<h2 id="the-minimal-dns-configuration">The minimal DNS configuration<a class="headerlink" href="#the-minimal-dns-configuration" title="Permanent link">&para;</a></h2>
+<p>This example shows you a set of records for one domain managed by mailcow. Each domain that is added to mailcow needs at least this set of records to function correctly.</p>
+<pre><code># Name              Type       Value
+mail                IN A       1.2.3.4
+autodiscover        IN CNAME   mail.example.org. (your ${MAILCOW_HOSTNAME})
+autoconfig          IN CNAME   mail.example.org. (your ${MAILCOW_HOSTNAME})
+@                   IN MX 10   mail.example.org. (your ${MAILCOW_HOSTNAME})
+</code></pre>
+<h2 id="dkim-spf-and-dmarc">DKIM, SPF and DMARC<a class="headerlink" href="#dkim-spf-and-dmarc" title="Permanent link">&para;</a></h2>
+<p>In the example DNS zone file snippet below, a simple <strong>SPF</strong> TXT record is used to only allow THIS server (the MX) to send mail for your domain. Every other server is disallowed but able to ("<code>~all</code>"). Please refer to <a href="http://www.open-spf.org/">SPF Project</a> for further reading.</p>
+<pre><code># Name              Type       Value
+@                   IN TXT     &quot;v=spf1 mx a -all&quot;
+</code></pre>
+<p>It is highly recommended to create a <strong>DKIM</strong> TXT record in your mailcow UI and set the corresponding TXT record in your DNS records. Please refer to <a href="http://www.opendkim.org">OpenDKIM</a> for further reading.</p>
+<pre><code># Name              Type       Value
+dkim._domainkey     IN TXT     &quot;v=DKIM1; k=rsa; t=s; s=email; p=...&quot;
+</code></pre>
+<p>The last step in protecting yourself and others is the implementation of a <strong>DMARC</strong> TXT record, for example by using the <a href="http://www.kitterman.com/dmarc/assistant.html">DMARC Assistant</a> (<a href="https://dmarcian.com/dmarc-inspector/google.com">check</a>).</p>
+<pre><code># Name              Type       Value
+_dmarc              IN TXT     &quot;v=DMARC1; p=reject; rua=mailto:mailauth-reports@example.org&quot;
+</code></pre>
+<h2 id="the-advanced-dns-configuration">The advanced DNS configuration<a class="headerlink" href="#the-advanced-dns-configuration" title="Permanent link">&para;</a></h2>
+<p><strong>SRV</strong> records specify the server(s) for a specific protocol on your domain. If you want to explicitly announce a service as not provided, give "." as the target address (instead of "mail.example.org."). Please refer to <a href="https://tools.ietf.org/html/rfc2782">RFC 2782</a>.</p>
+<pre><code># Name              Type       Priority Weight Port    Value
+_autodiscover._tcp  IN SRV     0        1      443      mail.example.org. (your ${MAILCOW_HOSTNAME})
+_caldavs._tcp       IN SRV     0        1      443      mail.example.org. (your ${MAILCOW_HOSTNAME})
+_caldavs._tcp       IN TXT                              &quot;path=/SOGo/dav/&quot;
+_carddavs._tcp      IN SRV     0        1      443      mail.example.org. (your ${MAILCOW_HOSTNAME})
+_carddavs._tcp      IN TXT                              &quot;path=/SOGo/dav/&quot;
+_imap._tcp          IN SRV     0        1      143      mail.example.org. (your ${MAILCOW_HOSTNAME})
+_imaps._tcp         IN SRV     0        1      993      mail.example.org. (your ${MAILCOW_HOSTNAME})
+_pop3._tcp          IN SRV     0        1      110      mail.example.org. (your ${MAILCOW_HOSTNAME})
+_pop3s._tcp         IN SRV     0        1      995      mail.example.org. (your ${MAILCOW_HOSTNAME})
+_sieve._tcp         IN SRV     0        1      4190     mail.example.org. (your ${MAILCOW_HOSTNAME})
+_smtps._tcp         IN SRV     0        1      465      mail.example.org. (your ${MAILCOW_HOSTNAME})
+_submission._tcp    IN SRV     0        1      587      mail.example.org. (your ${MAILCOW_HOSTNAME})
+</code></pre>
+<h2 id="testing">Testing<a class="headerlink" href="#testing" title="Permanent link">&para;</a></h2>
+<p>Here are some tools you can use to verify your DNS configuration:</p>
+<ul>
+<li><a href="https://mxtoolbox.com/SuperTool.aspx">MX Toolbox</a> (DNS, SMTP, RBL)</li>
+<li><a href="https://www.port25.com/dkim-wizard/">port25.com</a> (DKIM, SPF)</li>
+<li><a href="https://www.mail-tester.com/">Mail-tester</a> (DKIM, DMARC, SPF)</li>
+<li><a href="https://www.dmarcanalyzer.com/spf/checker/">DMARC Analyzer</a> (DMARC, SPF)</li>
+<li><a href="http://multirbl.valli.org/">MultiRBL.valli.org</a> (DNSBL, RBL, FCrDNS)</li>
+</ul>
+<h2 id="misc">Misc<a class="headerlink" href="#misc" title="Permanent link">&para;</a></h2>
+<h3 id="optional-dmarc-statistics">Optional DMARC Statistics<a class="headerlink" href="#optional-dmarc-statistics" title="Permanent link">&para;</a></h3>
+<p>If you are interested in statistics, you can additionally register with some of the many below DMARC statistic services - or self-host your own.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
 </div>
-<h2 id="minimum-system-resources">Minimum System Resources<a class="headerlink" href="#minimum-system-resources" title="Permanent link">&para;</a></h2>
-<p><strong>OpenVZ, Virtuozzo and LXC are not supported</strong>.</p>
-<p>Please make sure that your system has at least the following resources:</p>
-<table>
-<thead>
-<tr>
-<th>Resource</th>
-<th>mailcow: dockerized</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>CPU</td>
-<td>1 GHz</td>
-</tr>
-<tr>
-<td>RAM</td>
-<td><strong>Minimum</strong> 6 GiB + 1 GiB swap (default config)</td>
-</tr>
-<tr>
-<td>Disk</td>
-<td>20 GiB (without emails)</td>
-</tr>
-<tr>
-<td>System Type</td>
-<td>x86_64</td>
-</tr>
-</tbody>
-</table>
-<p>We recommend using any distribution listed as supported by Docker CE (check https://docs.docker.com/install/). We test on CentOS 7, Debian 10/11 and Ubuntu 18.04/20.04.</p>
-<p>ClamAV and Solr can be greedy with RAM. You may disable them in <code>mailcow.conf</code> by settings <code>SKIP_CLAMD=y</code> and <code>SKIP_SOLR=y</code>.</p>
-<p><strong>Info</strong>: We are aware that a pure MTA can run on 128 MiB RAM. mailcow is a full-grown and ready-to-use groupware with many extras making life easier. mailcow comes with a webserver, webmailer, ActiveSync (MS), antivirus, antispam, indexing (Solr), document scanner (Oletools), SQL (MariaDB), Cache (Redis), MDA, MTA, various web services etc.</p>
-<p>A single SOGo worker <strong>can</strong> acquire ~350 MiB RAM before it gets purged. The more ActiveSync connections you plan to use, the more RAM you will need. A default configuration spawns 20 workers.</p>
-<h4 id="usage-examples">Usage examples<a class="headerlink" href="#usage-examples" title="Permanent link">&para;</a></h4>
-<p>A company with 15 phones (EAS enabled) and about 50 concurrent IMAP connections should plan 16 GiB RAM.</p>
-<p>6 GiB RAM + 1 GiB swap are fine for most private installations while 8 GiB RAM are recommended for ~5 to 10 users.</p>
-<p>We can help to correctly plan your setup as part of our support.</p>
-<h2 id="firewall-ports">Firewall &amp; Ports<a class="headerlink" href="#firewall-ports" title="Permanent link">&para;</a></h2>
-<p>Please check if any of mailcow's standard ports are open and not in use by other applications:</p>
-<pre><code>ss -tlpn | grep -E -w '25|80|110|143|443|465|587|993|995|4190|5222|5269|5443'
-# or:
-netstat -tulpn | grep -E -w '25|80|110|143|443|465|587|993|995|4190|5222|5269|5443'
-</code></pre>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>There are several problems with running mailcow on a firewalld/ufw enabled system. You should disable it (if possible) and move your ruleset to the DOCKER-USER chain, which is not cleared by a Docker service restart, instead. See <a href="https://blog.donnex.net/docker-and-iptables-filtering/">this (blog.donnex.net)</a> or <a href="https://unrouted.io/2017/08/15/docker-firewall/">this (unrouted.io)</a> guide for information about how to use iptables-persistent with the DOCKER-USER chain.
-As mailcow runs dockerized, INPUT rules have no effect on restricting access to mailcow. Use the FORWARD chain instead.</p>
+<p>It is worth considering that if you request DMARC statistic reports to your mailcow server and your mailcow server is not configured correctly to receive these reports, you may not get accurate and complete results. Please consider using an alternative email domain for receiving DMARC reports.</p>
+<p>It is worth mentioning, that the following suggestions are not a comprehensive list of all services and tools available, but only a small few of the many choices.</p>
+<ul>
+<li><a href="https://gmail.com/postmaster">Postmaster Tool</a></li>
+<li><a href="https://github.com/domainaware/parsedmarc">parsedmarc</a> (self-hosted)</li>
+<li><a href="https://fraudmarc.com/">Fraudmarc</a></li>
+<li><a href="https://dmarc.postmarkapp.com">Postmark</a></li>
+<li><a href="https://dmarcian.com/">Dmarcian</a></li>
+</ul>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
 </div>
-<p>If this command returns any results please remove or stop the application running on that port. You may also adjust mailcows ports via the <code>mailcow.conf</code> configuration file.</p>
-<h3 id="default-ports">Default Ports<a class="headerlink" href="#default-ports" title="Permanent link">&para;</a></h3>
-<p>If you have a firewall in front of mailcow, please make sure that these ports are open for incoming connections:</p>
-<table>
-<thead>
-<tr>
-<th>Service</th>
-<th align="center">Protocol</th>
-<th align="left">Port</th>
-<th align="left">Container</th>
-<th>Variable</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Postfix SMTP</td>
-<td align="center">TCP</td>
-<td align="left">25</td>
-<td align="left">postfix-mailcow</td>
-<td><code>${SMTP_PORT}</code></td>
-</tr>
-<tr>
-<td>Postfix SMTPS</td>
-<td align="center">TCP</td>
-<td align="left">465</td>
-<td align="left">postfix-mailcow</td>
-<td><code>${SMTPS_PORT}</code></td>
-</tr>
-<tr>
-<td>Postfix Submission</td>
-<td align="center">TCP</td>
-<td align="left">587</td>
-<td align="left">postfix-mailcow</td>
-<td><code>${SUBMISSION_PORT}</code></td>
-</tr>
-<tr>
-<td>Dovecot IMAP</td>
-<td align="center">TCP</td>
-<td align="left">143</td>
-<td align="left">dovecot-mailcow</td>
-<td><code>${IMAP_PORT}</code></td>
-</tr>
-<tr>
-<td>Dovecot IMAPS</td>
-<td align="center">TCP</td>
-<td align="left">993</td>
-<td align="left">dovecot-mailcow</td>
-<td><code>${IMAPS_PORT}</code></td>
-</tr>
-<tr>
-<td>Dovecot POP3</td>
-<td align="center">TCP</td>
-<td align="left">110</td>
-<td align="left">dovecot-mailcow</td>
-<td><code>${POP_PORT}</code></td>
-</tr>
-<tr>
-<td>Dovecot POP3S</td>
-<td align="center">TCP</td>
-<td align="left">995</td>
-<td align="left">dovecot-mailcow</td>
-<td><code>${POPS_PORT}</code></td>
-</tr>
-<tr>
-<td>Dovecot ManageSieve</td>
-<td align="center">TCP</td>
-<td align="left">4190</td>
-<td align="left">dovecot-mailcow</td>
-<td><code>${SIEVE_PORT}</code></td>
-</tr>
-<tr>
-<td>HTTP(S)</td>
-<td align="center">TCP</td>
-<td align="left">80/443</td>
-<td align="left">nginx-mailcow</td>
-<td><code>${HTTP_PORT}</code> / <code>${HTTPS_PORT}</code></td>
-</tr>
-</tbody>
-</table>
-<p>To bind a service to an IP address, you can prepend the IP like this: <code>SMTP_PORT=1.2.3.4:25</code></p>
-<p><strong>Important</strong>: You cannot use IP:PORT bindings in HTTP_PORT and HTTPS_PORT. Please use <code>HTTP_PORT=1234</code> and <code>HTTP_BIND=1.2.3.4</code> instead.</p>
-<h3 id="important-for-hetzner-firewalls">Important for Hetzner firewalls<a class="headerlink" href="#important-for-hetzner-firewalls" title="Permanent link">&para;</a></h3>
-<p>Quoting https://github.com/chermsen via https://github.com/mailcow/mailcow-dockerized/issues/497#issuecomment-469847380 (THANK YOU!):</p>
-<p>For all who are struggling with the Hetzner firewall:</p>
-<p>Port 53 unimportant for the firewall configuration in this case. According to the documentation unbound uses the port range 1024-65535 for outgoing requests.
-Since the Hetzner Robot Firewall is a static firewall (each incoming packet is checked isolated) - the following rules must be applied:</p>
-<p><strong>For TCP</strong></p>
-<pre><code>SRC-IP:       ---
-DST IP:       ---
-SRC Port:    ---
-DST Port:    1024-65535
-Protocol:    tcp
-TCP flags:   ack
-Action:      Accept
+<p>These services may provide you with a TXT record you need to insert into your DNS records as the provider specifies. Please ensure you read the provider's documentation from the service you choose as this process may vary.</p>
+<h3 id="email-test-for-spf-dkim-and-dmarc">Email test for SPF, DKIM and DMARC:<a class="headerlink" href="#email-test-for-spf-dkim-and-dmarc" title="Permanent link">&para;</a></h3>
+<p>To run a rudimentary email authentication check, send a mail to <code>check-auth at verifier.port25.com</code> and wait for a reply. You will find a report similar to the following:</p>
+<pre><code>==========================================================
+Summary of Results
+==========================================================
+SPF check:          pass
+&quot;iprev&quot; check:      pass
+DKIM check:         pass
+DKIM check:         pass
+SpamAssassin check: ham
+
+==========================================================
+Details:
+==========================================================
+....
 </code></pre>
-<p><strong>For UDP</strong></p>
-<pre><code>SRC-IP:       ---
-DST IP:       ---
-SRC Port:    ---
-DST Port:    1024-65535
-Protocol:    udp
-Action:      Accept
-</code></pre>
-<p>If you want to apply a more restrictive port range you have to change the config of unbound first (after installation):</p>
-<p>{mailcow-dockerized}/data/conf/unbound/unbound.conf:</p>
-<pre><code>outgoing-port-avoid: 0-32767
-</code></pre>
-<p>Now the firewall rules can be adjusted as follows:</p>
-<pre><code>[...]
-DST Port:  32768-65535
-[...]
-</code></pre>
-<h2 id="date-and-time">Date and Time<a class="headerlink" href="#date-and-time" title="Permanent link">&para;</a></h2>
-<p>To ensure that you have the correct date and time setup on your system, please check the output of <code>timedatectl status</code>:</p>
-<pre><code>$ timedatectl status
-      Local time: Sat 2017-05-06 02:12:33 CEST
-  Universal time: Sat 2017-05-06 00:12:33 UTC
-        RTC time: Sat 2017-05-06 00:12:32
-       Time zone: Europe/Berlin (CEST, +0200)
-     NTP enabled: yes
-NTP synchronized: yes
- RTC in local TZ: no
-      DST active: yes
- Last DST change: DST began at
-                  Sun 2017-03-26 01:59:59 CET
-                  Sun 2017-03-26 03:00:00 CEST
- Next DST change: DST ends (the clock jumps one hour backwards) at
-                  Sun 2017-10-29 02:59:59 CEST
-                  Sun 2017-10-29 02:00:00 CET
-</code></pre>
-<p>The lines <code>NTP enabled: yes</code> and <code>NTP synchronized: yes</code> indicate whether you have NTP enabled and if it's synchronized.</p>
-<p>To enable NTP you need to run the command <code>timedatectl set-ntp true</code>. You also need to edit your <code>/etc/systemd/timesyncd.conf</code>:</p>
-<pre><code># vim /etc/systemd/timesyncd.conf
-[Time]
-NTP=0.pool.ntp.org 1.pool.ntp.org 2.pool.ntp.org 3.pool.ntp.org
-</code></pre>
-<h2 id="hetzner-cloud-and-probably-others">Hetzner Cloud (and probably others)<a class="headerlink" href="#hetzner-cloud-and-probably-others" title="Permanent link">&para;</a></h2>
-<p>Check <code>/etc/network/interfaces.d/50-cloud-init.cfg</code> and change the IPv6 interface from eth0:0 to eth0:</p>
-<pre><code># Wrong:
-auto eth0:0
-iface eth0:0 inet6 static
-# Right:
-auto eth0
-iface eth0 inet6 static
-</code></pre>
-<p>Reboot or restart the interface.
-You may want to <a href="https://wiki.hetzner.de/index.php/Cloud_IP_static/en#disable_cloud-init_network_changes">disable cloud-init network changes.</a></p>
-<h2 id="mtu">MTU<a class="headerlink" href="#mtu" title="Permanent link">&para;</a></h2>
-<p>Especially relevant for OpenStack users: Check your MTU and set it accordingly in docker-compose.yml. See <strong>4.1</strong> in <a href="https://mailcow.github.io/mailcow-dockerized-docs/i_u_m_install/">our installation docs</a>.</p>
+<p>The full report will contain more technical details.</p>
+<h3 id="fully-qualified-domain-name-fqdn">Fully Qualified Domain Name (FQDN)<a class="headerlink" href="#fully-qualified-domain-name-fqdn" title="Permanent link">&para;</a></h3>
+<p>[^1]: A <strong>Fully Qualified Domain Name</strong> (<strong>FQDN</strong>) is the complete (absolute) domain name for a specific computer or host, on the Internet. The FQDN consists of at least three parts divided by a dot: the hostname, the domain name, and the Top Level Domain (<strong>TLD</strong> for short). In the example of <code>mx.mailcow.email</code> the hostname would be <code>mx</code>, the domain name <code>mailcow</code> and the TLD <code>email</code>.</p>
 
               
             </article>
@@ -2561,6 +2564,26 @@ You may want to <a href="https://wiki.hetzner.de/index.php/Cloud_IP_static/en#di
       </main>
       
         <footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href="../prerequisite-system/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Prepare your system" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Prepare your system
+            </div>
+          </div>
+        </a>
+      
+      
+    </nav>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
@@ -2617,12 +2640,12 @@ You may want to <a href="https://wiki.hetzner.de/index.php/Cloud_IP_static/en#di
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "../../..", "features": [], "translations": {"clipboard.copy": "In Zwischenablage kopieren", "clipboard.copied": "In Zwischenablage kopiert", "search.config.lang": "de", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Suche", "search.result.placeholder": "Suchbegriff eingeben", "search.result.none": "Keine Suchergebnisse", "search.result.one": "1 Suchergebnis", "search.result.other": "# Suchergebnisse", "search.result.more.one": "1 weiteres Suchergebnis auf dieser Seite", "search.result.more.other": "# weitere Suchergebnisse auf dieser Seite", "search.result.term.missing": "Es fehlt", "select.version.title": "Version ausw\u00e4hlen"}, "search": "../../../assets/javascripts/workers/search.22074ed6.min.js"}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.22074ed6.min.js"}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.960e086b.min.js"></script>
+      <script src="../../assets/javascripts/bundle.960e086b.min.js"></script>
       
-        <script src="../../../assets/js/clients.js"></script>
+        <script src="../../assets/js/clients.js"></script>
       
     
   </body>
