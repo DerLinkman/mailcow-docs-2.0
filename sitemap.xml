@@ -26,6 +26,56 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://mailcow.github.io/mailcow-dockerized-docs/post_installation/firststeps-disable_ipv6/</loc>
+         <lastmod>2022-01-29</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://mailcow.github.io/mailcow-dockerized-docs/post_installation/firststeps-dmarc_reporting/</loc>
+         <lastmod>2022-01-29</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://mailcow.github.io/mailcow-dockerized-docs/post_installation/firststeps-firststeps-local_mta/</loc>
+         <lastmod>2022-01-29</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://mailcow.github.io/mailcow-dockerized-docs/post_installation/firststeps-ip_bindings/</loc>
+         <lastmod>2022-01-29</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://mailcow.github.io/mailcow-dockerized-docs/post_installation/firststeps-logging/</loc>
+         <lastmod>2022-01-29</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://mailcow.github.io/mailcow-dockerized-docs/post_installation/firststeps-rp/</loc>
+         <lastmod>2022-01-29</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://mailcow.github.io/mailcow-dockerized-docs/post_installation/firststeps-rspamd_ui/</loc>
+         <lastmod>2022-01-29</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://mailcow.github.io/mailcow-dockerized-docs/post_installation/firststeps-snat/</loc>
+         <lastmod>2022-01-29</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://mailcow.github.io/mailcow-dockerized-docs/post_installation/firststeps-ssl/</loc>
+         <lastmod>2022-01-29</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://mailcow.github.io/mailcow-dockerized-docs/post_installation/firststeps-sync_jobs_migration/</loc>
+         <lastmod>2022-01-29</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://mailcow.github.io/mailcow-dockerized-docs/prerequisite/prerequisite-dns/</loc>
          <lastmod>2022-01-29</lastmod>
          <changefreq>daily</changefreq>
