@@ -1,12 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-         <loc>https://mailcow.github.io/mailcow-dockerized-docs/</loc>
+         <loc>https://mailcow.github.io/mailcow-dockerized-docs/index.de/</loc>
          <lastmod>2022-01-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://mailcow.github.io/mailcow-dockerized-docs/prerequisite-system/</loc>
+         <loc>https://mailcow.github.io/mailcow-dockerized-docs/index.en/</loc>
+         <lastmod>2022-01-29</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://mailcow.github.io/mailcow-dockerized-docs/prerequisite-system.de/</loc>
+         <lastmod>2022-01-29</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://mailcow.github.io/mailcow-dockerized-docs/prerequisite-system.en/</loc>
          <lastmod>2022-01-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
