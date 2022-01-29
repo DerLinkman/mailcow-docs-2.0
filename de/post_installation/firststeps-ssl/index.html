@@ -62,7 +62,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#lets-encrypt-sofort-einsatzbereit" class="md-skip">
+        <a href="#lets-encrypt-wird-mitgeliefert" class="md-skip">
           Zum Inhalt
         </a>
       
@@ -454,11 +454,11 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#lets-encrypt-sofort-einsatzbereit" class="md-nav__link">
-    Let's Encrypt (sofort einsatzbereit)
+  <a href="#lets-encrypt-wird-mitgeliefert" class="md-nav__link">
+    Let's Encrypt (wird mitgeliefert)
   </a>
   
-    <nav class="md-nav" aria-label="Let's Encrypt (sofort einsatzbereit)">
+    <nav class="md-nav" aria-label="Let's Encrypt (wird mitgeliefert)">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -517,8 +517,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#wie-sie-ihr-eigenes-zertifikat-verwenden" class="md-nav__link">
-    Wie Sie Ihr eigenes Zertifikat verwenden
+  <a href="#ein-eigenes-zertifikat-verwenden" class="md-nav__link">
+    Ein eigenes Zertifikat verwenden
   </a>
   
 </li>
@@ -606,7 +606,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../post_installation/firststeps-local_mta.md" class="md-nav__link">
+      <a href="../firststeps-local_mta/" class="md-nav__link">
         Lokaler MTA auf Docker-Host
       </a>
     </li>
@@ -2383,11 +2383,11 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#lets-encrypt-sofort-einsatzbereit" class="md-nav__link">
-    Let's Encrypt (sofort einsatzbereit)
+  <a href="#lets-encrypt-wird-mitgeliefert" class="md-nav__link">
+    Let's Encrypt (wird mitgeliefert)
   </a>
   
-    <nav class="md-nav" aria-label="Let's Encrypt (sofort einsatzbereit)">
+    <nav class="md-nav" aria-label="Let's Encrypt (wird mitgeliefert)">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -2446,8 +2446,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#wie-sie-ihr-eigenes-zertifikat-verwenden" class="md-nav__link">
-    Wie Sie Ihr eigenes Zertifikat verwenden
+  <a href="#ein-eigenes-zertifikat-verwenden" class="md-nav__link">
+    Ein eigenes Zertifikat verwenden
   </a>
   
 </li>
@@ -2497,7 +2497,7 @@
 
   <h1>Erweitertes SSL</h1>
 
-<h2 id="lets-encrypt-sofort-einsatzbereit">Let's Encrypt (sofort einsatzbereit)<a class="headerlink" href="#lets-encrypt-sofort-einsatzbereit" title="Permanent link">&para;</a></h2>
+<h2 id="lets-encrypt-wird-mitgeliefert">Let's Encrypt (wird mitgeliefert)<a class="headerlink" href="#lets-encrypt-wird-mitgeliefert" title="Permanent link">&para;</a></h2>
 <p>Der "acme-mailcow" Container wird versuchen, ein LE-Zertifikat für <code>${MAILCOW_HOSTNAME}</code>, <code>autodiscover.ADDED_MAIL_DOMAIN</code> und <code>autoconfig.ADDED_MAIL_DOMAIN</code> zu erhalten.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
@@ -2573,7 +2573,7 @@ Sie sollten sicherstellen, dass diese Clients den <code>MAILCOW_HOSTNAME</code> 
 <li><code>mail.domain1.tld, autoconfig.domain1.tld, autodiscover.domain1.tld</code> -&gt; individuelles Zertifikat für domain1.tld, kann von Clients ohne SNI-Unterstützung nicht verwendet werden</li>
 <li><code>mail.domain2.tld, autoconfig.domain2.tld, autodiscover.domain2.tld</code> -&gt; individuelles Zertifikat für domain2.tld, kann von Clients ohne SNI-Unterstützung nicht verwendet werden</li>
 </ul>
-<h3 id="wie-sie-ihr-eigenes-zertifikat-verwenden">Wie Sie Ihr eigenes Zertifikat verwenden<a class="headerlink" href="#wie-sie-ihr-eigenes-zertifikat-verwenden" title="Permanent link">&para;</a></h3>
+<h3 id="ein-eigenes-zertifikat-verwenden">Ein eigenes Zertifikat verwenden<a class="headerlink" href="#ein-eigenes-zertifikat-verwenden" title="Permanent link">&para;</a></h3>
 <p>Stellen Sie sicher, dass Sie mailcows internen LE-Client deaktivieren (siehe oben).</p>
 <p>Um Ihre eigenen Zertifikate zu verwenden, speichern Sie einfach das kombinierte Zertifikat (mit dem Zertifikat und der zwischengeschalteten CA/CA, falls vorhanden) unter <code>data/assets/ssl/cert.pem</code> und den entsprechenden Schlüssel unter <code>data/assets/ssl/key.pem</code>.</p>
 <p><strong>WICHTIG:</strong> Verwenden Sie keine symbolischen Links! Stellen Sie sicher, dass Sie die Zertifikate kopieren und sie nicht mit <code>data/assets/ssl</code> verknüpfen.</p>

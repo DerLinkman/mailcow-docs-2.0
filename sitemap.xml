@@ -36,12 +36,12 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://mailcow.github.io/mailcow-dockerized-docs/post_installation/firststeps-firststeps-local_mta/</loc>
+         <loc>https://mailcow.github.io/mailcow-dockerized-docs/post_installation/firststeps-ip_bindings/</loc>
          <lastmod>2022-01-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://mailcow.github.io/mailcow-dockerized-docs/post_installation/firststeps-ip_bindings/</loc>
+         <loc>https://mailcow.github.io/mailcow-dockerized-docs/post_installation/firststeps-local_mta/</loc>
          <lastmod>2022-01-29</lastmod>
          <changefreq>daily</changefreq>
     </url>

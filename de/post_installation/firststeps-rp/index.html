@@ -62,7 +62,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#nginx" class="md-skip">
+        <a href="#apache-24" class="md-skip">
           Zum Inhalt
         </a>
       
@@ -480,7 +480,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../post_installation/firststeps-local_mta.md" class="md-nav__link">
+      <a href="../firststeps-local_mta/" class="md-nav__link">
         Lokaler MTA auf Docker-Host
       </a>
     </li>
@@ -536,6 +536,13 @@
       Inhaltsverzeichnis
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#apache-24" class="md-nav__link">
+    Apache 2.4
+  </a>
+  
+</li>
       
         <li class="md-nav__item">
   <a href="#nginx" class="md-nav__link">
@@ -2322,6 +2329,13 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#apache-24" class="md-nav__link">
+    Apache 2.4
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#nginx" class="md-nav__link">
     Nginx
   </a>
@@ -2378,91 +2392,85 @@
 <p>Sie müssen die Nginx-Seite, die mit mailcow: dockerized geliefert wird, nicht ändern.
 mailcow: dockerized vertraut auf das Standard-Gateway IP 172.22.1.1 als Proxy.</p>
 <p>1. Stellen Sie sicher, dass Sie HTTP_BIND und HTTPS_BIND in <code>mailcow.conf</code> auf eine lokale Adresse ändern und die Ports entsprechend einstellen, zum Beispiel:
-`` bash
-HTTP_BIND=127.0.0.1
-HTTP_PORT=8080
-HTTPS_BIND=127.0.0.1
-HTTPS_PORT=8443
-<div class="highlight"><pre><span></span><code>Dadurch werden auch die Bindungen innerhalb des Nginx-Containers geändert! Dies ist wichtig, wenn Sie sich entscheiden, einen Proxy innerhalb von Docker zu verwenden.
-
-**WICHTIG:** Verwenden Sie nicht Port 8081, 9081 oder 65510!
-
-Erzeugen Sie die betroffenen Container neu, indem Sie `docker-compose up -d` ausführen.
-
-**Wichtige Informationen, bitte lesen Sie diese sorgfältig durch!**
-
-!!! info
-    Wenn Sie planen, einen Reverse-Proxy zu verwenden und einen anderen Servernamen als **MAILCOW_HOSTNAME** verwenden wollen, müssen Sie **Zusätzliche Servernamen für mailcow UI** am Ende dieser Seite hinzufügen.
-
-!!! warning
-    Stellen Sie sicher, dass Sie `generate_config.sh` ausführen, bevor Sie die untenstehenden Konfigurationsbeispiele aktivieren.
-    Das Skript `generate_config.sh` kopiert die Snake-oil Zertifikate an den richtigen Ort, so dass die Dienste nicht aufgrund fehlender Dateien nicht starten können.
-
-!!! warning
-    Wenn du TLS SNI aktivierst (`ENABLE_TLS_SNI` in mailcow.conf), **müssen** die Zertifikatspfade in deinem Reverse-Proxy mit den korrekten Pfaden in data/assets/ssl/{hostname} übereinstimmen. Die Zertifikate werden in `data/assets/ssl/{hostname1,hostname2,etc}` aufgeteilt und werden daher nicht funktionieren, wenn Sie die Beispiele von unten kopieren, die auf `data/assets/ssl/cert.pem` etc. zeigen.
-
-!!! info
-    Die Verwendung der untenstehenden Site-Konfigurationen wird **acme-Anfragen an mailcow** weiterleiten und es die Zertifikate selbst verwalten lassen.
-    Der Nachteil der Verwendung von mailcow als ACME-Client hinter einem Reverse-Proxy ist, dass Sie Ihren Webserver neu laden müssen, nachdem acme-mailcow das Zertifikat geändert/erneuert/erstellt hat. Sie können entweder Ihren Webserver täglich neu laden oder ein Skript schreiben, um die Datei auf Änderungen zu überwachen.
-    Auf vielen Servern wird logrotate den Webserver sowieso täglich neu laden.
-
-    Wenn Sie eine lokale Certbot-Installation verwenden möchten, müssen Sie die SSL-Zertifikatsparameter entsprechend ändern.
-    **Stellen Sie sicher, dass Sie ein Post-Hook-Skript** ausführen, wenn Sie sich entscheiden, externe ACME-Clients zu verwenden. Ein Beispiel finden Sie am Ende dieser Seite.
-
-
-2\. Konfigurieren Sie Ihren lokalen Webserver als Reverse Proxy:
-
-### Apache 2.4
-Erforderliche Module:
-</code></pre></div>
-a2enmod rewrite proxy proxy_http headers ssl
-<div class="highlight"><pre><span></span><code>Let&#39;s Encrypt wird unserem Rewrite folgen, Zertifikatsanfragen in mailcow werden problemlos funktionieren.
-
-**Die hervorgehobenen Zeilen müssen beachtet werden**.
-
-``` apache hl_lines=&quot;2 10 11 17 22 23 24 25 30 31&quot;
-&lt;VirtualHost *:80&gt;
-  ServerName ZU MAILCOW HOSTNAMEN ÄNDERN
-  ServerAlias autodiscover.*
-  ServerAlias autoconfig.*
-  RewriteEngine on
-
-  RewriteCond %{HTTPS} off
-  RewriteRule ^/?(.*) https://%{HTTP_HOST}/$1 [R=301,L]
-
-  ProxyPass / http://127.0.0.1:8080/
-  ProxyPassReverse / http://127.0.0.1:8080/
-  ProxyPreserveHost On
-  ProxyAddHeaders On
-  RequestHeader set X-Forwarded-Proto &quot;http&quot;
-&lt;/VirtualHost&gt;
-&lt;VirtualHost *:443&gt;
-  ServerName ZU MAILCOW HOSTNAMEN ÄNDERN
-  ServerAlias autodiscover.*
-  ServerAlias autoconfig.*
-
-  # You should proxy to a plain HTTP session to offload SSL processing
-  ProxyPass /Microsoft-Server-ActiveSync http://127.0.0.1:8080/Microsoft-Server-ActiveSync connectiontimeout=4000
-  ProxyPassReverse /Microsoft-Server-ActiveSync http://127.0.0.1:8080/Microsoft-Server-ActiveSync
-  ProxyPass / http://127.0.0.1:8080/
-  ProxyPassReverse / http://127.0.0.1:8080/
-  ProxyPreserveHost On
-  ProxyAddHeaders On
-  RequestHeader set X-Forwarded-Proto &quot;https&quot;
-
-  SSLCertificateFile MAILCOW_ORDNER/data/assets/ssl/cert.pem
-  SSLCertificateKeyFile MAILCOW_ORDNER/data/assets/ssl/key.pem
-
-  # Wenn Sie einen HTTPS-Host als Proxy verwenden möchten:
-  #SSLProxyEngine On
-
-  # Wenn Sie einen Proxy für einen nicht vertrauenswürdigen HTTPS-Host einrichten wollen:
-  #SSLProxyVerify none
-  #SSLProxyCheckPeerCN off
-  #SSLProxyCheckPeerName off
-  #SSLProxyCheckPeerExpire off
-&lt;/VirtualHost&gt;
+<div class="highlight"><pre><span></span><code><span class="nv">HTTP_BIND</span><span class="o">=</span><span class="m">127</span>.0.0.1
+<span class="nv">HTTP_PORT</span><span class="o">=</span><span class="m">8080</span>
+<span class="nv">HTTPS_BIND</span><span class="o">=</span><span class="m">127</span>.0.0.1
+<span class="nv">HTTPS_PORT</span><span class="o">=</span><span class="m">8443</span>
 </code></pre></div></p>
+<p>Dadurch werden auch die Bindungen innerhalb des Nginx-Containers geändert! Dies ist wichtig, wenn Sie sich entscheiden, einen Proxy innerhalb von Docker zu verwenden.</p>
+<p><strong>WICHTIG:</strong> Verwenden Sie nicht Port 8081, 9081 oder 65510!</p>
+<p>Erzeugen Sie die betroffenen Container neu, indem Sie <code>docker-compose up -d</code> ausführen.</p>
+<p><strong>Wichtige Informationen, bitte lesen Sie diese sorgfältig durch!</strong></p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>Wenn Sie planen, einen Reverse-Proxy zu verwenden und einen anderen Servernamen als <strong>MAILCOW_HOSTNAME</strong> verwenden wollen, müssen Sie <strong>Zusätzliche Servernamen für mailcow UI</strong> am Ende dieser Seite hinzufügen.</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Stellen Sie sicher, dass Sie <code>generate_config.sh</code> ausführen, bevor Sie die untenstehenden Konfigurationsbeispiele aktivieren.
+Das Skript <code>generate_config.sh</code> kopiert die Snake-oil Zertifikate an den richtigen Ort, so dass die Dienste nicht aufgrund fehlender Dateien nicht starten können.</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Wenn du TLS SNI aktivierst (<code>ENABLE_TLS_SNI</code> in mailcow.conf), <strong>müssen</strong> die Zertifikatspfade in deinem Reverse-Proxy mit den korrekten Pfaden in data/assets/ssl/{hostname} übereinstimmen. Die Zertifikate werden in <code>data/assets/ssl/{hostname1,hostname2,etc}</code> aufgeteilt und werden daher nicht funktionieren, wenn Sie die Beispiele von unten kopieren, die auf <code>data/assets/ssl/cert.pem</code> etc. zeigen.</p>
+</div>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>Die Verwendung der untenstehenden Site-Konfigurationen wird <strong>acme-Anfragen an mailcow</strong> weiterleiten und es die Zertifikate selbst verwalten lassen.
+Der Nachteil der Verwendung von mailcow als ACME-Client hinter einem Reverse-Proxy ist, dass Sie Ihren Webserver neu laden müssen, nachdem acme-mailcow das Zertifikat geändert/erneuert/erstellt hat. Sie können entweder Ihren Webserver täglich neu laden oder ein Skript schreiben, um die Datei auf Änderungen zu überwachen.
+Auf vielen Servern wird logrotate den Webserver sowieso täglich neu laden.</p>
+<p>Wenn Sie eine lokale Certbot-Installation verwenden möchten, müssen Sie die SSL-Zertifikatsparameter entsprechend ändern.
+<strong>Stellen Sie sicher, dass Sie ein Post-Hook-Skript</strong> ausführen, wenn Sie sich entscheiden, externe ACME-Clients zu verwenden. Ein Beispiel finden Sie am Ende dieser Seite.</p>
+</div>
+<p>2. Konfigurieren Sie Ihren lokalen Webserver als Reverse Proxy:</p>
+<h3 id="apache-24">Apache 2.4<a class="headerlink" href="#apache-24" title="Permanent link">&para;</a></h3>
+<p>Erforderliche Module:
+<div class="highlight"><pre><span></span><code>a2enmod rewrite proxy proxy_http headers ssl
+</code></pre></div></p>
+<p>Let's Encrypt wird unserem Rewrite folgen, Zertifikatsanfragen in mailcow werden problemlos funktionieren.</p>
+<p><strong>Die hervorgehobenen Zeilen müssen beachtet werden</strong>.</p>
+<div class="highlight"><pre><span></span><code><span class="nt">&lt;VirtualHost</span><span class="w"> </span><span class="s">*:80</span><span class="nt">&gt;</span><span class="w"></span>
+<span class="hll"><span class="w">  </span><span class="nb">ServerName</span><span class="w"> </span>ZU<span class="w"> </span>MAILCOW<span class="w"> </span>HOSTNAMEN<span class="w"> </span>ÄNDERN<span class="w"></span>
+</span><span class="w">  </span><span class="nb">ServerAlias</span><span class="w"> </span>autodiscover.*<span class="w"></span>
+<span class="w">  </span><span class="nb">ServerAlias</span><span class="w"> </span>autoconfig.*<span class="w"></span>
+<span class="w">  </span><span class="nb">RewriteEngine</span><span class="w"> </span><span class="k">on</span><span class="w"></span>
+
+<span class="w">  </span><span class="nb">RewriteCond</span><span class="w"> </span>%{HTTPS}<span class="w"> </span><span class="k">off</span><span class="w"></span>
+<span class="w">  </span><span class="nb">RewriteRule</span><span class="w"> </span>^/?(.*)<span class="w"> </span>https://%{HTTP_HOST}/$1<span class="w"> </span>[R=301,L]<span class="w"></span>
+
+<span class="hll"><span class="w">  </span><span class="nb">ProxyPass</span><span class="w"> </span>/<span class="w"> </span>http://127.0.0.1:8080/<span class="w"></span>
+</span><span class="hll"><span class="w">  </span><span class="nb">ProxyPassReverse</span><span class="w"> </span>/<span class="w"> </span>http://127.0.0.1:8080/<span class="w"></span>
+</span><span class="w">  </span><span class="nb">ProxyPreserveHost</span><span class="w"> </span><span class="k">On</span><span class="w"></span>
+<span class="w">  </span><span class="nb">ProxyAddHeaders</span><span class="w"> </span><span class="k">On</span><span class="w"></span>
+<span class="w">  </span><span class="nb">RequestHeader</span><span class="w"> </span>set<span class="w"> </span>X-Forwarded-Proto<span class="w"> </span><span class="s2">&quot;http&quot;</span><span class="w"></span>
+<span class="nt">&lt;/VirtualHost&gt;</span><span class="w"></span>
+<span class="nt">&lt;VirtualHost</span><span class="w"> </span><span class="s">*:443</span><span class="nt">&gt;</span><span class="w"></span>
+<span class="hll"><span class="w">  </span><span class="nb">ServerName</span><span class="w"> </span>ZU<span class="w"> </span>MAILCOW<span class="w"> </span>HOSTNAMEN<span class="w"> </span>ÄNDERN<span class="w"></span>
+</span><span class="w">  </span><span class="nb">ServerAlias</span><span class="w"> </span>autodiscover.*<span class="w"></span>
+<span class="w">  </span><span class="nb">ServerAlias</span><span class="w"> </span>autoconfig.*<span class="w"></span>
+
+<span class="w">  </span><span class="c"># You should proxy to a plain HTTP session to offload SSL processing</span><span class="w"></span>
+<span class="hll"><span class="w">  </span><span class="nb">ProxyPass</span><span class="w"> </span><span class="sx">/Microsoft-Server-ActiveSync</span><span class="w"> </span>http://127.0.0.1:8080/Microsoft-Server-ActiveSync<span class="w"> </span>connectiontimeout=4000<span class="w"></span>
+</span><span class="hll"><span class="w">  </span><span class="nb">ProxyPassReverse</span><span class="w"> </span><span class="sx">/Microsoft-Server-ActiveSync</span><span class="w"> </span>http://127.0.0.1:8080/Microsoft-Server-ActiveSync<span class="w"></span>
+</span><span class="hll"><span class="w">  </span><span class="nb">ProxyPass</span><span class="w"> </span>/<span class="w"> </span>http://127.0.0.1:8080/<span class="w"></span>
+</span><span class="hll"><span class="w">  </span><span class="nb">ProxyPassReverse</span><span class="w"> </span>/<span class="w"> </span>http://127.0.0.1:8080/<span class="w"></span>
+</span><span class="w">  </span><span class="nb">ProxyPreserveHost</span><span class="w"> </span><span class="k">On</span><span class="w"></span>
+<span class="w">  </span><span class="nb">ProxyAddHeaders</span><span class="w"> </span><span class="k">On</span><span class="w"></span>
+<span class="w">  </span><span class="nb">RequestHeader</span><span class="w"> </span>set<span class="w"> </span>X-Forwarded-Proto<span class="w"> </span><span class="s2">&quot;https&quot;</span><span class="w"></span>
+
+<span class="hll"><span class="w">  </span><span class="nb">SSLCertificateFile</span><span class="w"> </span>MAILCOW_ORDNER/data/assets/ssl/cert.pem<span class="w"></span>
+</span><span class="hll"><span class="w">  </span><span class="nb">SSLCertificateKeyFile</span><span class="w"> </span>MAILCOW_ORDNER/data/assets/ssl/key.pem<span class="w"></span>
+</span>
+<span class="w">  </span><span class="c"># Wenn Sie einen HTTPS-Host als Proxy verwenden möchten:</span><span class="w"></span>
+<span class="w">  </span><span class="c">#SSLProxyEngine On</span><span class="w"></span>
+
+<span class="w">  </span><span class="c"># Wenn Sie einen Proxy für einen nicht vertrauenswürdigen HTTPS-Host einrichten wollen:</span><span class="w"></span>
+<span class="w">  </span><span class="c">#SSLProxyVerify none</span><span class="w"></span>
+<span class="w">  </span><span class="c">#SSLProxyCheckPeerCN off</span><span class="w"></span>
+<span class="w">  </span><span class="c">#SSLProxyCheckPeerName off</span><span class="w"></span>
+<span class="w">  </span><span class="c">#SSLProxyCheckPeerExpire off</span><span class="w"></span>
+<span class="nt">&lt;/VirtualHost&gt;</span><span class="w"></span>
+</code></pre></div>
 <h3 id="nginx">Nginx<a class="headerlink" href="#nginx" title="Permanent link">&para;</a></h3>
 <p>Let's Encrypt folgt unserem Rewrite, Zertifikatsanfragen funktionieren problemlos.</p>
 <p><strong>Kümmern Sie sich um die hervorgehobenen Zeilen</strong>.</p>
@@ -2628,7 +2636,7 @@ Dazu müssen wir <code>SKIP_LETS_ENCRYPT=y</code> in unserer <code>mailcow.conf<
 <p>Da Traefik 2 ein acme v2 Format verwendet, um ALLE Lizenzen von allen Domains zu speichern, müssen wir einen Weg finden, die Zertifikate auszulagern. Zum Glück haben wir [diesen kleinen Container] (<a href="https://hub.docker.com/r/humenius/traefik-certs-dumper">https://hub.docker.com/r/humenius/traefik-certs-dumper</a>), der die Datei <code>acme.json</code> über ein Volume und eine Variable <code>DOMAIN=example. org</code>, und damit wird der Container die <code>cert.pem</code> und <code>key.pem</code> Dateien ausgeben, dafür lassen wir einfach den <code>traefik-certs-dumper</code> Container laufen, binden das <code>/traefik</code> Volume an den Ordner, in dem unsere <code>acme.json</code> gespeichert ist, binden das <code>/output</code> Volume an unseren mailcow <code>data/assets/ssl/</code> Ordner, und setzen die <code>DOMAIN=example.org</code> Variable auf die Domain, von der wir die Zertifikate ausgeben wollen. </p>
 <p>Dieser Container überwacht die Datei <code>acme.json</code> auf Änderungen und generiert die Dateien <code>cert.pem</code> und <code>key.pem</code> direkt in <code>data/assets/ssl/</code>, wobei der Pfad mit dem <code>/output</code>-Pfad des Containers verbunden ist.</p>
 <p>Sie können es über die Kommandozeile ausführen oder das [hier] gezeigte docker-compose verwenden (<a href="https://hub.docker.com/r/humenius/traefik-certs-dumper">https://hub.docker.com/r/humenius/traefik-certs-dumper</a>).</p>
-<p>Nachdem wir die Zertifikate übertragen haben, müssen wir die Konfigurationen aus unseren Postfix- und Dovecot-Containern neu laden und die Zertifikate überprüfen. Wie das geht, sehen Sie <a href="https://mailcow.github.io/mailcow-dockerized-docs/de/post_installation/firststeps-ssl/#wie-sie-ihr-eigenes-zertifikat-verwenden">hier</a>.</p>
+<p>Nachdem wir die Zertifikate übertragen haben, müssen wir die Konfigurationen aus unseren Postfix- und Dovecot-Containern neu laden und die Zertifikate überprüfen. Wie das geht, sehen Sie <a href="https://mailcow.github.io/mailcow-dockerized-docs/de/post_installation/firststeps-ssl/#ein-eigenes-zertifikat-verwenden">hier</a>.</p>
 <p>Und das sollte es gewesen sein 😊, Sie können überprüfen, ob der Traefik-Router einwandfrei funktioniert, indem Sie das Dashboard von Traefik / traefik logs / über https auf die eingestellte Domain zugreifen, oder / und HTTPS, SMTP und IMAP mit den Befehlen auf der zuvor verlinkten Seite überprüfen.</p>
 <h3 id="optional-post-hook-skript-fur-nicht-mailcow-acme-clients">Optional: Post-Hook-Skript für nicht-mailcow ACME-Clients<a class="headerlink" href="#optional-post-hook-skript-fur-nicht-mailcow-acme-clients" title="Permanent link">&para;</a></h3>
 <p>Die Verwendung eines lokalen Certbots (oder eines anderen ACME-Clients) erfordert den Neustart einiger Container, was Sie mit einem Post-Hook-Skript erledigen können.
