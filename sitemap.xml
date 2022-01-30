@@ -26,6 +26,21 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://mailcow.github.io/mailcow-dockerized-docs/models/model-acl/</loc>
+         <lastmod>2022-01-30</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://mailcow.github.io/mailcow-dockerized-docs/models/model-passwd/</loc>
+         <lastmod>2022-01-30</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://mailcow.github.io/mailcow-dockerized-docs/models/model-sender_rcv/</loc>
+         <lastmod>2022-01-30</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://mailcow.github.io/mailcow-dockerized-docs/post_installation/firststeps-disable_ipv6/</loc>
          <lastmod>2022-01-30</lastmod>
          <changefreq>daily</changefreq>
