@@ -2434,7 +2434,7 @@
 <p>Hier sind häufige Probleme und mögliche Lösungen:</p>
 <h2 id="mail-kommt-in-einer-schleife-zu-sich-selbst-zuruck">Mail kommt in einer Schleife zu sich selbst zurück.<a class="headerlink" href="#mail-kommt-in-einer-schleife-zu-sich-selbst-zuruck" title="Permanent link">&para;</a></h2>
 <p>Bitte überprüfen Sie in Ihrer mailcow UI, ob Sie die Domain als <strong>Backup MX</strong> eingestellt haben:
-<img alt="Überprüfen Sie Ihre MX-Backup-Einstellungen" src="assets/images/troubleshooting/mailcow-backupmx.png" /></p>
+<img alt="Überprüfen Sie Ihre MX-Backup-Einstellungen" src="../../assets/images/troubleshooting/mailcow-backupmx.png" /></p>
 <h2 id="ich-kann-mails-empfangen-aber-nicht-senden">Ich kann Mails empfangen, aber nicht senden<a class="headerlink" href="#ich-kann-mails-empfangen-aber-nicht-senden" title="Permanent link">&para;</a></h2>
 <p>Es gibt viele Gründe, die Sie daran hindern können, Mails zu versenden:</p>
 <ul>
@@ -2447,7 +2447,7 @@ Verbunden mit 74.125.133.27.
 Escape-Zeichen ist &#39;^]&#39;.
 </code></pre></div>
 <h2 id="meine-mails-werden-als-spam-identifiziert">Meine Mails werden als Spam identifiziert<a class="headerlink" href="#meine-mails-werden-als-spam-identifiziert" title="Permanent link">&para;</a></h2>
-<p>Bitte lesen Sie unsere <a href="prerequisites/prerequisite-dns.de.md">DNS-Konfiguration</a> Anleitung.</p>
+<p>Bitte lesen Sie unsere <a href="../prerequisites/prerequisite-dns.de.md">DNS-Konfiguration</a> Anleitung.</p>
 <h2 id="docker-compose-wirft-seltsame-fehler-aus">docker-compose wirft seltsame Fehler aus.<a class="headerlink" href="#docker-compose-wirft-seltsame-fehler-aus" title="Permanent link">&para;</a></h2>
 <p>... wie:</p>
 <ul>
@@ -2464,7 +2464,7 @@ Escape-Zeichen ist &#39;^]&#39;.
 <p>Wenn Sie eine Fehlermeldung erhalten wie:</p>
 <div class="highlight"><pre><span></span><code>ERROR: for postfix-mailcow Cannot start service postfix-mailcow: driver failed programming external connectivity on endpoint mailcowdockerized_postfix-mailcow_1: Error starting userland proxy: listen tcp 0.0.0:25: bind: address already in use
 </code></pre></div>
-<p>während Sie versuchen, mailcow: dockerized zu starten / zu installieren, stellen Sie sicher, dass Sie unseren Abschnitt über <a href="prerequisites/prerequisite-system.de.md/#firewall-ports">prerequisites</a> befolgt haben.</p>
+<p>während Sie versuchen, mailcow: dockerized zu starten / zu installieren, stellen Sie sicher, dass Sie unseren Abschnitt über <a href="../prerequisites/prerequisite-system.de.md/#firewall-ports">prerequisites</a> befolgt haben.</p>
 <h2 id="xyz-kann-keine-verbindung-zu">XYZ kann keine Verbindung zu ...<a class="headerlink" href="#xyz-kann-keine-verbindung-zu" title="Permanent link">&para;</a></h2>
 <p>Bitte überprüfen Sie Ihre lokale Firewall!
 Docker und iptables-basierte Firewalls erstellen manchmal widersprüchliche Regeln. Deaktivieren Sie daher die Firewall auf Ihrem Host, um festzustellen, ob Ihre Verbindungsprobleme durch solche Konflikte verursacht werden. Wenn dies der Fall ist, müssen Sie manuell entsprechende Regeln in Ihrer Host-Firewall erstellen, um die erforderlichen Verbindungen zuzulassen.</p>
