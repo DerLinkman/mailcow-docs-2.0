@@ -884,7 +884,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../troubleshooting/debug-mysql_upgrade.md" class="md-nav__link">
+      <a href="../../troubleshooting/debug-mysql_upgrade/" class="md-nav__link">
         Manuelles MySQL-Upgrade
       </a>
     </li>
@@ -2546,7 +2546,7 @@ docker-compose logs --tail=200 -f acme-mailcow
 <h3 id="das-lets-encrypt-subjectaltname-limit-von-100-domains">Das Let's Encrypt subjectAltName-Limit von 100 Domains<a class="headerlink" href="#das-lets-encrypt-subjectaltname-limit-von-100-domains" title="Permanent link">&para;</a></h3>
 <p>Let's Encrypt hat derzeit <a href="https://letsencrypt.org/docs/rate-limits/">ein Limit von 100 Domainnamen pro Zertifikat</a>.</p>
 <p>Standardmäßig erstellt "acme-mailcow" ein einzelnes SAN-Zertifikat für alle validierten Domains
-(siehe den <a href="#lets-encrypt-out-of-the-box">ersten Abschnitt</a> und <a href="#additional-domain-names">Zusätzliche Domainnamen</a>).
+(siehe den <a href="#lets-encrypt-wird-mitgeliefert">ersten Abschnitt</a> und <a href="#zusatzliche-domain-namen">Zusätzliche Domainnamen</a>).
 Dies bietet beste Kompatibilität, bedeutet aber, dass das Let's Encrypt-Limit überschritten wird, wenn Sie zu viele Domains zu einer einzelnen Mailcow-Installation hinzufügen.</p>
 <p>Um dies zu lösen, können Sie <code>ENABLE_SSL_SNI</code> so konfigurieren, dass es generiert wird:</p>
 <ul>
@@ -2582,7 +2582,7 @@ Sie sollten sicherstellen, dass diese Clients den <code>MAILCOW_HOSTNAME</code> 
 docker neu starten $(docker ps -qaf name=nginx-mailcow)
 docker restart $(docker ps -qaf name=dovecot-mailcow)
 </code></pre></div>
-<p>Siehe <a href="../firststeps-rp/#optional-post-hook-script-for-non-mailcow-acme-clients">Post-Hook-Skript für Nicht-Mailcow-ACME-Clients</a> für ein vollständiges Beispielskript.</p>
+<p>Siehe <a href="../post_installation/firststeps-rp#optional-post-hook-skript-fur-nicht-mailcow-acme-clients">Post-Hook-Skript für Nicht-Mailcow-ACME-Clients</a> für ein vollständiges Beispielskript.</p>
 <h3 id="test-gegen-das-acme-verzeichnis">Test gegen das ACME-Verzeichnis<a class="headerlink" href="#test-gegen-das-acme-verzeichnis" title="Permanent link">&para;</a></h3>
 <p>Bearbeiten Sie <code>mailcow.conf</code> und fügen Sie <code>LE_STAGING=y</code> hinzu.</p>
 <p>Führen Sie <code>docker-compose up -d</code> aus, um Ihre Änderungen zu aktivieren.</p>

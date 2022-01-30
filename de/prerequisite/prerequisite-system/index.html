@@ -856,7 +856,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../troubleshooting/debug-mysql_upgrade.md" class="md-nav__link">
+      <a href="../../troubleshooting/debug-mysql_upgrade/" class="md-nav__link">
         Manuelles MySQL-Upgrade
       </a>
     </li>
@@ -2449,10 +2449,10 @@
 <div class="admonition info">
 <p class="admonition-title">Info</p>
 <ul>
-<li>mailcow: dockerized erfordert, dass <a href="#default-ports">einige Ports</a> für eingehende Verbindungen offen sind, also stellen Sie sicher, dass Ihre Firewall diese nicht blockiert.</li>
+<li>mailcow: dockerized erfordert, dass <a href="#standard-ports">einige Ports</a> für eingehende Verbindungen offen sind, also stellen Sie sicher, dass Ihre Firewall diese nicht blockiert.</li>
 <li>Stellen Sie sicher, dass keine andere Anwendung die Konfiguration von mailcow stört, wie z.B. ein anderer Maildienst</li>
-<li>Ein korrektes DNS-Setup ist entscheidend für jedes gute Mailserver-Setup, also stellen Sie bitte sicher, dass Sie zumindest die <a href="../prerequisite-dns#the-minimal-dns-configuration">basics</a> abgedeckt haben, bevor Sie beginnen!</li>
-<li>Stellen Sie sicher, dass Ihr System ein korrektes Datum und eine korrekte <a href="#date-and-time">Zeiteinstellung</a> hat. Dies ist entscheidend für verschiedene Komponenten wie die Zwei-Faktor-TOTP-Authentifizierung.</li>
+<li>Ein korrektes DNS-Setup ist entscheidend für jedes gute Mailserver-Setup, also stellen Sie bitte sicher, dass Sie zumindest die <a href="../prerequisite-dns/#die-minimale-dns-konfiguration">basics</a> abgedeckt haben, bevor Sie beginnen!</li>
+<li>Stellen Sie sicher, dass Ihr System ein korrektes Datum und eine korrekte <a href="#datum-und-uhrzeit">Zeiteinstellung</a> hat. Dies ist entscheidend für verschiedene Komponenten wie die Zwei-Faktor-TOTP-Authentifizierung.</li>
 </ul>
 </div>
 <h2 id="minimale-systemressourcen">Minimale Systemressourcen<a class="headerlink" href="#minimale-systemressourcen" title="Permanent link">&para;</a></h2>
@@ -2651,7 +2651,7 @@ iface eth0 inet6 statisch
 <p>Starten Sie die Schnittstelle neu oder starten Sie sie neu.
 Vielleicht möchten Sie <a href="https://wiki.hetzner.de/index.php/Cloud_IP_static/en#disable_cloud-init_network_changes">cloud-init Netzwerkänderungen deaktivieren.</a></p>
 <h2 id="mtu">MTU<a class="headerlink" href="#mtu" title="Permanent link">&para;</a></h2>
-<p>Besonders relevant für OpenStack-Benutzer: Überprüfen Sie Ihre MTU und setzen Sie sie entsprechend in docker-compose.yml. Siehe <strong>4.1</strong> in <a href="https://mailcow.github.io/mailcow-dockerized-docs/i_u_m_install/">unseren Installationsanleitungen</a>.</p>
+<p>Besonders relevant für OpenStack-Benutzer: Überprüfen Sie Ihre MTU und setzen Sie sie entsprechend in docker-compose.yml. Siehe <strong>4.1</strong> in <a href="../../i_u_m/i_u_m_install/">unseren Installationsanleitungen</a>.</p>
 
               
             </article>

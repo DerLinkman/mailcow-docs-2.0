@@ -8,14 +8,14 @@
       
       
       
-        <link rel="canonical" href="https://mailcow.github.io/mailcow-dockerized-docs/en/troubleshooting/debug-mysql_upgrades/">
+        <link rel="canonical" href="https://mailcow.github.io/mailcow-dockerized-docs/en/troubleshooting/debug-mysql_upgrade/">
       
       <link rel="icon" href="../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.1.9">
     
     
       
-        <title>Debug mysql upgrades - mailcow: dockerized documentation</title>
+        <title>Manual MySQL upgrade - mailcow: dockerized documentation</title>
       
     
     
@@ -94,7 +94,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Debug mysql upgrades
+              Manual MySQL upgrade
             
           </span>
         </div>
@@ -112,13 +112,13 @@
             <ul class="md-select__list">
               
                 <li class="md-select__item">
-                  <a href="../../../troubleshooting/debug-mysql_upgrades/" hreflang="en" class="md-select__link">
+                  <a href="../../../troubleshooting/debug-mysql_upgrade/" hreflang="en" class="md-select__link">
                     English
                   </a>
                 </li>
                 
                 <li class="md-select__item">
-                  <a href="../../../de/troubleshooting/debug-mysql_upgrades/" hreflang="de" class="md-select__link">
+                  <a href="../../../de/troubleshooting/debug-mysql_upgrade/" hreflang="de" class="md-select__link">
                     Deutsch
                   </a>
                 </li>
@@ -644,12 +644,14 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" checked>
       
       
       
@@ -754,11 +756,48 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../../../troubleshooting/debug-mysql_upgrade.md" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Manual MySQL upgrade
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         Manual MySQL upgrade
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#run-a-manual-mysql_upgrade" class="md-nav__link">
+    Run a manual mysql_upgrade
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -2273,12 +2312,12 @@
             <article class="md-content__inner md-typeset">
               
                 
-<a href="https://github.com/mailcow/mailcow-dockerized-docs/edit/master/docs/troubleshooting/debug-mysql_upgrades.en.md" title="Edit this page" class="md-content__button md-icon">
+<a href="https://github.com/mailcow/mailcow-dockerized-docs/edit/master/docs/troubleshooting/debug-mysql_upgrade.en.md" title="Edit this page" class="md-content__button md-icon">
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
 </a>
 
 
-  <h1>Debug mysql upgrades</h1>
+  <h1>Manual MySQL upgrade</h1>
 
 <h2 id="run-a-manual-mysql_upgrade">Run a manual mysql_upgrade<a class="headerlink" href="#run-a-manual-mysql_upgrade" title="Permanent link">&para;</a></h2>
 <p>This step is usually not necessary. </p>
@@ -2303,6 +2342,41 @@ exit
       </main>
       
         <footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href="../debug-logs/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Logs" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Logs
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../debug-mysql_aria/" class="md-footer__link md-footer__link--next" aria-label="Next: Recover crashed Aria storage engine" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Recover crashed Aria storage engine
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">

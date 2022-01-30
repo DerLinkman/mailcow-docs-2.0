@@ -126,7 +126,7 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://mailcow.github.io/mailcow-dockerized-docs/troubleshooting/debug-mysql_upgrades/</loc>
+         <loc>https://mailcow.github.io/mailcow-dockerized-docs/troubleshooting/debug-mysql_upgrade/</loc>
          <lastmod>2022-01-30</lastmod>
          <changefreq>daily</changefreq>
     </url>

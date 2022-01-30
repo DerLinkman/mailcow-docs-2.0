@@ -884,7 +884,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../troubleshooting/debug-mysql_upgrade.md" class="md-nav__link">
+      <a href="../../troubleshooting/debug-mysql_upgrade/" class="md-nav__link">
         Manual MySQL upgrade
       </a>
     </li>
@@ -2582,7 +2582,7 @@ You should make sure these clients use the <code>MAILCOW_HOSTNAME</code> for sec
 docker restart $(docker ps -qaf name=nginx-mailcow)
 docker restart $(docker ps -qaf name=dovecot-mailcow)
 </code></pre></div>
-<p>See <a href="../firststeps-rp/#optional-post-hook-script-for-non-mailcow-acme-clients">Post-hook script for non-mailcow ACME clients</a> for a full example script.</p>
+<p>See <a href="../post_installation/firststeps-rp/#optional-post-hook-script-for-non-mailcow-acme-clients">Post-hook script for non-mailcow ACME clients</a> for a full example script.</p>
 <h3 id="test-against-staging-acme-directory">Test against staging ACME directory<a class="headerlink" href="#test-against-staging-acme-directory" title="Permanent link">&para;</a></h3>
 <p>Edit <code>mailcow.conf</code> and add <code>LE_STAGING=y</code>.</p>
 <p>Run <code>docker-compose up -d</code> to activate your changes.</p>

@@ -761,7 +761,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../troubleshooting/debug-mysql_upgrade.md" class="md-nav__link">
+      <a href="../../troubleshooting/debug-mysql_upgrade/" class="md-nav__link">
         Manuelles MySQL-Upgrade
       </a>
     </li>
@@ -2313,7 +2313,7 @@ Wenn Sie daran interessiert sind, wie das funktioniert, können Sie sich die Rea
 <div class="highlight"><pre><span></span><code>nano mailcow.conf
 </code></pre></div>
 Wenn Sie planen, einen Reverse Proxy zu verwenden, können Sie zum Beispiel HTTPS an 127.0.0.1 auf Port 8443 und HTTP an 127.0.0.1 auf Port 8080 binden.</p>
-<p>Möglicherweise müssen Sie einen vorinstallierten MTA stoppen, der Port 25/tcp blockiert. Siehe <a href="https://mailcow.github.io/mailcow-dockerized-docs/de/post_installation/firststeps-local_mta">dieses Kapitel</a>, um zu erfahren, wie man Postfix rekonfiguriert, um nach einer erfolgreichen Installation neben mailcow zu laufen.</p>
+<p>Möglicherweise müssen Sie einen vorinstallierten MTA stoppen, der Port 25/tcp blockiert. Siehe <a href="../../post_installation/firststeps-local_mta/">dieses Kapitel</a>, um zu erfahren, wie man Postfix rekonfiguriert, um nach einer erfolgreichen Installation neben mailcow zu laufen.</p>
 <p>Einige Updates modifizieren mailcow.conf und fügen neue Parameter hinzu. Es ist schwer, in der Dokumentation den Überblick zu behalten. Bitte überprüfen Sie deren Beschreibung und fragen Sie, wenn Sie unsicher sind, in den bekannten Kanälen nach Rat.</p>
 <p><strong>4.1.</strong> Benutzer mit einer MTU ungleich 1500 (z.B. OpenStack):</p>
 <p><strong>Wenn Sie auf Probleme und seltsame Phänomene stoßen, überprüfen Sie bitte Ihre MTU.</strong></p>
@@ -2328,7 +2328,7 @@ Fügen Sie den neuen Parameter driver_opts wie folgt hinzu:
 </code></pre></div></p>
 <p><strong>4.2.</strong> Benutzer ohne ein IPv6-aktiviertes Netzwerk auf ihrem Hostsystem:</p>
 <p><strong>Einschalten von IPv6. Endlich.</strong></p>
-<p>Wenn Sie kein IPv6-fähiges Netzwerk auf Ihrem Host haben und Sie sich nicht um ein besseres Internet kümmern (hehe), ist es empfehlenswert, <a href="https://mailcow.github.io/mailcow-dockerized-docs/de/post_installation/firststeps-disable_ipv6">IPv6 zu deaktivieren</a> für das mailcow-Netzwerk, um unvorhergesehene Probleme zu vermeiden.</p>
+<p>Wenn Sie kein IPv6-fähiges Netzwerk auf Ihrem Host haben und Sie sich nicht um ein besseres Internet kümmern (hehe), ist es empfehlenswert, <a href="../../post_installation/firststeps-disable_ipv6/">IPv6 zu deaktivieren</a> für das mailcow-Netzwerk, um unvorhergesehene Probleme zu vermeiden.</p>
 <p><strong>5.</strong> Ziehen Sie die Images und führen Sie die Compose-Datei aus. Der Parameter <code>-d</code> wird mailcow starten: dockerized detached:
 <div class="highlight"><pre><span></span><code>docker-compose pull
 docker-compose up -d
@@ -2337,7 +2337,7 @@ docker-compose up -d
 <p>Sie können nun auf <strong>https://${MAILCOW_HOSTNAME}</strong> mit den Standard-Zugangsdaten <code>admin</code> + Passwort <code>moohoo</code> zugreifen.</p>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
-<p>Wenn Sie mailcow nicht hinter einem Reverse Proxy verwenden, sollten Sie <a href="https://mailcow.github.io/mailcow-dockerized-docs/de/u_e/80_to_443">alle HTTP-Anfragen auf HTTPS umleiten</a>.</p>
+<p>Wenn Sie mailcow nicht hinter einem Reverse Proxy verwenden, sollten Sie <a href="../u_e/80_to_443.de.md">alle HTTP-Anfragen auf HTTPS umleiten</a>.</p>
 </div>
 <p>Die Datenbank wird sofort initialisiert, nachdem eine Verbindung zu MySQL hergestellt werden kann.</p>
 <p>Ihre Daten bleiben in mehreren Docker-Volumes erhalten, die nicht gelöscht werden, wenn Sie Container neu erstellen oder löschen. Führen Sie <code>docker volume ls</code> aus, um eine Liste aller Volumes zu sehen. Sie können <code>docker-compose down</code> sicher ausführen, ohne persistente Daten zu entfernen.</p>
