@@ -2337,7 +2337,7 @@
 
 <h2 id="sicherung">Sicherung<a class="headerlink" href="#sicherung" title="Permanent link">&para;</a></h2>
 <div class="highlight"><pre><span></span><code>cd /pfad/zu/mailcow-dockerized
-Quelle mailcow.conf
+source mailcow.conf
 DATE=$(Datum +&quot;%Y%m%d_%H%M%S&quot;)
 docker-compose exec -T mysql-mailcow mysqldump --default-character-set=utf8mb4 -u${DBUSER} -p${DBPASS} ${DBNAME} &gt; backup_${DBNAME}_${DATE}.sql
 </code></pre></div>
@@ -2347,7 +2347,7 @@ docker-compose exec -T mysql-mailcow mysqldump --default-character-set=utf8mb4 -
 <p>Sie sollten den SQL-Dump ohne <code>docker-compose</code> umleiten, um Parsing-Fehler zu vermeiden.</p>
 </div>
 <div class="highlight"><pre><span></span><code>cd /pfad/zu/mailcow-dockerized
-Quelle mailcow.conf
+source mailcow.conf
 docker exec -i $(docker-compose ps -q mysql-mailcow) mysql -u${DBUSER} -p${DBPASS} ${DBNAME} &lt; backup_file.sql
 </code></pre></div>
 
