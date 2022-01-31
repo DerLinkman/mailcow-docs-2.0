@@ -2337,7 +2337,7 @@ docker-compose up -d
 <p>Sie können nun auf <strong>https://${MAILCOW_HOSTNAME}</strong> mit den Standard-Zugangsdaten <code>admin</code> + Passwort <code>moohoo</code> zugreifen.</p>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
-<p>Wenn Sie mailcow nicht hinter einem Reverse Proxy verwenden, sollten Sie <a href="../u_e/80_to_443.de.md">alle HTTP-Anfragen auf HTTPS umleiten</a>.</p>
+<p>Wenn Sie mailcow nicht hinter einem Reverse Proxy verwenden, sollten Sie <a href="../manual-guides/80_to_443.de.md">alle HTTP-Anfragen auf HTTPS umleiten</a>.</p>
 </div>
 <p>Die Datenbank wird sofort initialisiert, nachdem eine Verbindung zu MySQL hergestellt werden kann.</p>
 <p>Ihre Daten bleiben in mehreren Docker-Volumes erhalten, die nicht gelöscht werden, wenn Sie Container neu erstellen oder löschen. Führen Sie <code>docker volume ls</code> aus, um eine Liste aller Volumes zu sehen. Sie können <code>docker-compose down</code> sicher ausführen, ohne persistente Daten zu entfernen.</p>
