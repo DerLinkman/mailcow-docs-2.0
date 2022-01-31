@@ -15,7 +15,7 @@
     
     
       
-        <title>U e mailcow ui fido - mailcow: dockerized documentation</title>
+        <title>WebAuthn / FIDO2 - mailcow: dockerized documentation</title>
       
     
     
@@ -94,7 +94,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              U e mailcow ui fido
+              WebAuthn / FIDO2
             
           </span>
         </div>
@@ -1049,12 +1049,14 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8" type="checkbox" id="__nav_8" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8" type="checkbox" id="__nav_8" checked>
       
       
       
@@ -1075,12 +1077,14 @@
               
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8_1" type="checkbox" id="__nav_8_1" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8_1" type="checkbox" id="__nav_8_1" checked>
       
       
       
@@ -1213,11 +1217,62 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../../../../manual-guides/mailcow-UI/u_e-fido.md" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          WebAuthn / FIDO2
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         WebAuthn / FIDO2
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Inhaltsverzeichnis">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Inhaltsverzeichnis
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#wie-wird-uv-in-mailcow-gehandhabt" class="md-nav__link">
+    Wie wird UV in mailcow gehandhabt?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#login-und-schlussel-verarbeitung" class="md-nav__link">
+    Login und Schlüssel-Verarbeitung
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wer-kann-webauthn-benutzen-um-sich-bei-mailcow-anzumelden" class="md-nav__link">
+    Wer kann WebAuthn benutzen, um sich bei mailcow anzumelden?
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -2292,7 +2347,7 @@
 </a>
 
 
-  <h1>U e mailcow ui fido</h1>
+  <h1>WebAuthn / FIDO2</h1>
 
 <h2 id="wie-wird-uv-in-mailcow-gehandhabt">Wie wird UV in mailcow gehandhabt?<a class="headerlink" href="#wie-wird-uv-in-mailcow-gehandhabt" title="Permanent link">&para;</a></h2>
 <p>Das UV-Flag (wie in "user verification") erzwingt, dass WebAuthn den Benutzer verifiziert, bevor es den Zugriff auf den Schlüssel erlaubt (denken Sie an eine PIN). Wir erzwingen keine UV, um Logins über iOS und NFC (YubiKey) zu ermöglichen.</p>
@@ -2318,6 +2373,26 @@
       </main>
       
         <footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href="../u_e-mailcow_ui-tfa/" class="md-footer__link md-footer__link--prev" aria-label="Zurück: Zwei-Faktoren-Authentifizierung" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Zurück
+              </span>
+              Zwei-Faktoren-Authentifizierung
+            </div>
+          </div>
+        </a>
+      
+      
+    </nav>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
