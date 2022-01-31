@@ -15,7 +15,7 @@
     
     
       
-        <title>U e mailcow ui tfa - mailcow: dockerized documentation</title>
+        <title>Two-Factor Authentication - mailcow: dockerized documentation</title>
       
     
     
@@ -94,7 +94,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              U e mailcow ui tfa
+              Two-Factor Authentication
             
           </span>
         </div>
@@ -1049,12 +1049,14 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8" type="checkbox" id="__nav_8" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8" type="checkbox" id="__nav_8" checked>
       
       
       
@@ -1075,12 +1077,14 @@
               
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8_1" type="checkbox" id="__nav_8_1" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8_1" type="checkbox" id="__nav_8_1" checked>
       
       
       
@@ -1103,7 +1107,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../mailcow_UI/u_e-mailcow_ui-bl_wl.md" class="md-nav__link">
+      <a href="../u_e-mailcow_ui-bl_wl/" class="md-nav__link">
         Blacklist / Whitelist
       </a>
     </li>
@@ -1117,7 +1121,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../mailcow_UI/u_e-mailcow_ui-config.md" class="md-nav__link">
+      <a href="../u_e-mailcow_ui-config/" class="md-nav__link">
         Configuration
       </a>
     </li>
@@ -1131,7 +1135,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../mailcow_UI/u_e-mailcow_ui-css.md" class="md-nav__link">
+      <a href="../u_e-mailcow_ui-css/" class="md-nav__link">
         CSS overrides
       </a>
     </li>
@@ -1145,7 +1149,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../mailcow_UI/u_e-mailcow_ui-pushover.md" class="md-nav__link">
+      <a href="../u_e-mailcow_ui-pushover/" class="md-nav__link">
         Pushover
       </a>
     </li>
@@ -1159,7 +1163,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../mailcow_UI/u_e-mailcow_ui-spamfilter.md" class="md-nav__link">
+      <a href="../u_e-mailcow_ui-spamfilter/" class="md-nav__link">
         Spamfilter
       </a>
     </li>
@@ -1173,7 +1177,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../mailcow_UI/u_e-mailcow_ui-tagging.md" class="md-nav__link">
+      <a href="../u_e-mailcow_ui-tagging/" class="md-nav__link">
         Tagging
       </a>
     </li>
@@ -1187,7 +1191,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../mailcow_UI/u_e-mailcow_ui-spamalias.md" class="md-nav__link">
+      <a href="../u_e-mailcow_ui-spamalias/" class="md-nav__link">
         Temporary email aliases
       </a>
     </li>
@@ -1199,11 +1203,122 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../../mailcow_UI/u_e-mailcow_ui-tfa.md" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Two-Factor Authentication
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         Two-Factor Authentication
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#yubi-otp" class="md-nav__link">
+    Yubi OTP
+  </a>
+  
+    <nav class="md-nav" aria-label="Yubi OTP">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example-setup" class="md-nav__link">
+    Example setup
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#webauthn-u2f-replacement" class="md-nav__link">
+    WebAuthn (U2F, replacement)
+  </a>
+  
+    <nav class="md-nav" aria-label="WebAuthn (U2F, replacement)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-will-happen-to-my-registered-fido-security-key-after-the-update-from-u2f-to-webauthn" class="md-nav__link">
+    What will happen to my registered Fido Security Key after the Update from U2F to WebAuthn?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#disable-unofficial-supported-fido-security-keys" class="md-nav__link">
+    Disable unofficial supported Fido Security Keys
+  </a>
+  
+    <nav class="md-nav" aria-label="Disable unofficial supported Fido Security Keys">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example" class="md-nav__link">
+    Example:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#use-own-certificates-for-webauthn" class="md-nav__link">
+    Use own certificates for WebAuthn
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#is-it-dangerous-to-keep-the-vendor-check-disabled" class="md-nav__link">
+    Is it dangerous to keep the Vendor Check disabled?
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#totp" class="md-nav__link">
+    TOTP
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1215,7 +1330,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../mailcow_UI/u_e-fido.md" class="md-nav__link">
+      <a href="../u_e-fido.md" class="md-nav__link">
         WebAuthn / FIDO2
       </a>
     </li>
@@ -2352,7 +2467,7 @@
 </a>
 
 
-  <h1>U e mailcow ui tfa</h1>
+  <h1>Two-Factor Authentication</h1>
 
 <p>So far three methods for <em>Two-Factor Authentication</em> are implemented: WebAuthn (replacing U2F since February 2022), Yubi OTP, and TOTP</p>
 <ul>
@@ -2456,6 +2571,26 @@ These vendor certificates are only used to verify original hardware, not to secu
       </main>
       
         <footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href="../u_e-mailcow_ui-spamalias/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Temporary email aliases" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Temporary email aliases
+            </div>
+          </div>
+        </a>
+      
+      
+    </nav>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
