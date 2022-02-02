@@ -1702,7 +1702,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../u_e-webmail-site.md" class="md-nav__link">
+      <a href="../../Nginx/u_e-nginx_webmail-site/" class="md-nav__link">
         Create subdomain webmail.example.org
       </a>
     </li>
@@ -1716,7 +1716,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../u_e-nginx.md" class="md-nav__link">
+      <a href="../../Nginx/u_e-nginx_custom/" class="md-nav__link">
         Custom sites
       </a>
     </li>
@@ -1763,7 +1763,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../u_e-watchdog-thresholds.md" class="md-nav__link">
+      <a href="../../Watchdog/u_e-watchdog-thresholds/" class="md-nav__link">
         Thresholds
       </a>
     </li>
@@ -1784,7 +1784,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../u_e-redis.md" class="md-nav__link">
+      <a href="../../Redis/u_e-redis/" class="md-nav__link">
         Redis
       </a>
     </li>
@@ -1798,7 +1798,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../u_e-rspamd.md" class="md-nav__link">
+      <a href="../../Rspamd/u_e-rspamd/" class="md-nav__link">
         Rspamd
       </a>
     </li>
@@ -1812,7 +1812,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../u_e-sogo.md" class="md-nav__link">
+      <a href="../../SOGo/u_e-sogo/" class="md-nav__link">
         SOGo
       </a>
     </li>
@@ -1852,7 +1852,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../u_e-docker-cust_dockerfiles.md" class="md-nav__link">
+      <a href="../../Docker/u_e-docker-cust_dockerfiles/" class="md-nav__link">
         Customize Dockerfiles
       </a>
     </li>
@@ -1866,7 +1866,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../u_e-docker-dc_bash_compl.md" class="md-nav__link">
+      <a href="../../Docker/u_e-docker-dc_bash_compl/" class="md-nav__link">
         Docker Compose Bash Completion
       </a>
     </li>
@@ -1887,7 +1887,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../u_e-why_unbound.md" class="md-nav__link">
+      <a href="../../u_e-why_unbound/" class="md-nav__link">
         Why unbound?
       </a>
     </li>
@@ -1901,7 +1901,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../u_e-autodiscover_config.md" class="md-nav__link">
+      <a href="../../u_e-autodiscover_config/" class="md-nav__link">
         Autodiscover / Autoconfig
       </a>
     </li>
@@ -1915,7 +1915,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../u_e-80_to_443.md" class="md-nav__link">
+      <a href="../../u_e-80_to_443/" class="md-nav__link">
         Redirect HTTP to HTTPS
       </a>
     </li>
@@ -1929,7 +1929,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../u_e-reeanble-weak-protocols.md" class="md-nav__link">
+      <a href="../../u_e-reeanble-weak-protocols/" class="md-nav__link">
         Re-enable TLS 1.0 and TLS 1.1
       </a>
     </li>
@@ -1943,7 +1943,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../u_e-update-hooks.md" class="md-nav__link">
+      <a href="../../u_e-update-hooks/" class="md-nav__link">
         Run scripts before and after updates
       </a>
     </li>
@@ -2364,8 +2364,8 @@
 <h2 id="the-new-way">The "new" way<a class="headerlink" href="#the-new-way" title="Permanent link">&para;</a></h2>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-</div>
 <p>Newer Docker versions seem to complain about existing volumes. You can fix this temporarily by removing the existing volume and start mailcow with the override file. But it seems to be problematic after a reboot (needs to be confirmed).</p>
+</div>
 <p>An easy, dirty, yet stable workaround is to stop mailcow (<code>docker-compose down</code>), remove <code>/var/lib/docker/volumes/mailcowdockerized_vmail-vol-1/_data</code> and create a new link to your remote filesystem location, for example:</p>
 <div class="highlight"><pre><span></span><code>mv /var/lib/docker/volumes/mailcowdockerized_vmail-vol-1/_data /var/lib/docker/volumes/mailcowdockerized_vmail-vol-1/_data_backup
 ln -s /mnt/volume-xy/vmail_data /var/lib/docker/volumes/mailcowdockerized_vmail-vol-1/_data
@@ -2464,7 +2464,7 @@ volumes:
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Copyright &copy; 2022 Servercow Team & Community
+      Copyright &copy; 2022 Servercow Team & Community<br>Revision: 2
     </div>
   
   
