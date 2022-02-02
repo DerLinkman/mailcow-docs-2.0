@@ -2261,6 +2261,16 @@ export ASAN_OPTIONS=new_delete_type_mismatch=0:detect_leaks=1:detect_odr_violati
 <p>Leave the container running for a few minutes, hours or days (it should match the time you usually wait for the leak to "happen") and restart it: <code>docker-compose restart rspamd-mailcow</code>.</p>
 <p>Now enter the container by running <code>docker-compose exec rspamd-mailcow bash</code>, change the directory to /tmp and copy the asan Files to your desired location or upload them via termbin.com (<code>cat /tmp/rspamd-asan.* | nc termbin.com 9999</code>).</p>
 
+  <hr>
+<div class="md-source-file">
+  <small>
+    
+      Last update:
+      2022-02-02
+    
+  </small>
+</div>
+
               
             </article>
           </div>

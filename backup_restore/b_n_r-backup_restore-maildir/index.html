@@ -2333,6 +2333,16 @@ Set the filename <code>backup_vmail.tar.gz</code> to any custom name, but leave 
 docker run --rm -it -v $(docker inspect --format &#39;{{ range .Mounts }}{{ if eq .Destination &quot;/var/vmail&quot; }}{{ .Name }}{{ end }}{{ end }}&#39; $(docker-compose ps -q dovecot-mailcow)):/vmail -v ${PWD}:/backup debian:stretch-slim tar xvfz /backup/backup_vmail.tar.gz
 </code></pre></div>
 
+  <hr>
+<div class="md-source-file">
+  <small>
+    
+      Last update:
+      2022-02-02
+    
+  </small>
+</div>
+
               
             </article>
           </div>
