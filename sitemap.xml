@@ -36,6 +36,51 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://mailcow.github.io/mailcow-dockerized-docs/client/client-android/</loc>
+         <lastmod>2022-02-02</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://mailcow.github.io/mailcow-dockerized-docs/client/client-apple/</loc>
+         <lastmod>2022-02-02</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://mailcow.github.io/mailcow-dockerized-docs/client/client-emclient/</loc>
+         <lastmod>2022-02-02</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://mailcow.github.io/mailcow-dockerized-docs/client/client-kontact/</loc>
+         <lastmod>2022-02-02</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://mailcow.github.io/mailcow-dockerized-docs/client/client-manual/</loc>
+         <lastmod>2022-02-02</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://mailcow.github.io/mailcow-dockerized-docs/client/client-outlook/</loc>
+         <lastmod>2022-02-02</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://mailcow.github.io/mailcow-dockerized-docs/client/client-thunderbird/</loc>
+         <lastmod>2022-02-02</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://mailcow.github.io/mailcow-dockerized-docs/client/client-windows/</loc>
+         <lastmod>2022-02-02</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://mailcow.github.io/mailcow-dockerized-docs/client/client/</loc>
+         <lastmod>2022-02-02</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://mailcow.github.io/mailcow-dockerized-docs/i_u_m/i_u_m_deinstall/</loc>
          <lastmod>2022-02-02</lastmod>
          <changefreq>daily</changefreq>
