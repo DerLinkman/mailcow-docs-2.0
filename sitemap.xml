@@ -401,6 +401,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://mailcow.github.io/mailcow-dockerized-docs/third_party/third_party-gogs/</loc>
+         <lastmod>2022-02-04</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://mailcow.github.io/mailcow-dockerized-docs/third_party/third_party-mailman3/</loc>
          <lastmod>2022-02-04</lastmod>
          <changefreq>daily</changefreq>
